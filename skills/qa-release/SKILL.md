@@ -46,3 +46,4 @@ Always include:
 - Read `../../packs/auth-permission-pack.md` when the release changes access rules, object scope, or tenant visibility.
 - Read `../../packs/release-risk-pack.md` when deciding whether a change is safe to ship.
 - Read `../../packs/incident-response-pack.md` when release readiness depends on understanding a recent incident, regression, or environment-specific failure.
+- Read `../../packs/nextjs-app-pack.md` when release readiness depends on Next.js routing, caching, revalidation, or client/server boundary behavior.

@@ -356,8 +356,8 @@ The safest installation method today is to clone the repository and either:
 ### Clone the repository / 克隆仓库
 
 ```bash
-git clone https://github.com/xiaolubanchad-debug/codex-agent.git
-cd codex-agent
+git clone https://github.com/xiaolubanchad-debug/codex-xstack.git
+cd codex-xstack
 ```
 
 ### Use the install script / 使用安装脚本
@@ -508,6 +508,8 @@ The next milestone is **v0.2**, focused on improving website frontend/backend de
 - `release-risk-pack`
 - `incident-response-pack`
 - `component-consistency-pack`
+- initial stack-specific support via `nextjs-app-pack`  
+  并开始通过 `nextjs-app-pack` 提供第一批面向具体技术栈的支持
 - later web-focused reviews on top of those  
   后续还会在此基础上继续补充 Web 专项审查能力
 

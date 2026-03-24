@@ -40,4 +40,5 @@ Always include:
 - Read `../../packs/frontend-state-flow-pack.md` when implementing user-facing pages, components, or mutation flows.
 - Read `../../packs/form-flow-pack.md` when implementing forms, wizards, settings, or modal submissions.
 - Read `../../packs/component-consistency-pack.md` when implementing repeated UI patterns, shared controls, or design-system-adjacent work.
+- Read `../../packs/nextjs-app-pack.md` when implementing work inside a Next.js app, especially around App Router, route handlers, or server actions.
 - Read `../../packs/db-migration-pack.md` when implementing schema or migration-related changes.

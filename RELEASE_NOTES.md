@@ -92,8 +92,8 @@ The project is not trying to simulate an entire org chart or become a giant prom
 
 ## Likely next areas / 下一步可能的方向
 
-- stack-specific packs (Next.js, FastAPI, Rails, Laravel, etc.)  
-  针对具体技术栈的增强包（如 Next.js、FastAPI、Rails、Laravel 等）
+- expand stack-specific packs beyond the first `nextjs-app-pack` (FastAPI, Rails, Laravel, etc.)  
+  在第一版 `nextjs-app-pack` 之后，继续扩展更多面向具体技术栈的增强包（如 FastAPI、Rails、Laravel 等）
 - stronger observability helpers beyond current incident-response support  
   在现有事故响应支持之上继续增强可观测性辅助能力
 - packaging and distribution for easier reuse  
