@@ -126,6 +126,11 @@ Assess whether performance claims are backed by credible measurement.
 #### `document-release`
 Turn technical changes into clear release notes, operator updates, and stakeholder summaries.
 
+### Web-focused reviews
+
+#### `review-frontend-flow`
+Review a user-facing flow for state completeness, form behavior, UX quality, and frontend/backend alignment.
+
 ### Control modes
 
 #### `careful-mode`
@@ -200,6 +205,7 @@ skills/
   design-review/
   benchmark-change/
   document-release/
+  review-frontend-flow/
   careful-mode/
   freeze-mode/
   unfreeze-mode/
