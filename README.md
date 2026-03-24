@@ -103,10 +103,10 @@ That means:
 
 ---
 
-## v0.2 scope / v0.2 版本范围
+## v0.3 scope / v0.3 版本范围
 
-xstack v0.2 is the first release where the stack starts feeling intentionally **web-focused**.  
-xstack v0.2 是第一个明显开始朝 **Web 开发**方向收拢的版本。
+xstack v0.3 is the release where the project becomes clearly **Node-first**.  
+xstack v0.3 是 xstack 明确转向 **Node-first** 的版本。
 
 It keeps the core delivery loop:  
 它保留了核心交付闭环：
@@ -114,20 +114,16 @@ It keeps the core delivery loop:
 **plan → implement → review → validate → communicate**  
 **规划 → 实现 → 审查 → 验证 → 沟通**
 
-and adds a stronger website-development layer on top:  
-并在此基础上增加了更强的网站开发增强层：
+and builds a stronger Node/TypeScript delivery layer on top:  
+并在此基础上建立了更强的 Node/TypeScript 交付增强层：
 
-- frontend state coverage / 前端状态覆盖
-- form-flow quality / 表单流程质量
-- component consistency / 组件一致性
-- backend API contract discipline / 后端 API 契约约束
-- auth and permission review / 认证与权限审查
-- migration safety / 迁移安全性
-- full-stack contract alignment / 前后端契约对齐
-- release-risk and incident-response support / 发版风险与事故响应支持
+- web delivery packs for frontend, backend, and release work / 面向前端、后端和发版工作的 Web 交付 packs
+- stack-specific support for Next.js, Prisma, NestJS, tRPC, and Express / 面向 Next.js、Prisma、NestJS、tRPC 和 Express 的技术栈专项支持
+- stronger onboarding through install, doctor, quick start, and examples / 通过 install、doctor、quick start 和 examples 提供更强的上手体验
+- clearer release planning and release-ready documentation / 更清晰的版本规划与发布文档体系
 
-v0.2 is still compact, but it is no longer just a generic workflow baseline. It is now a more credible **Codex-first, Node-first full-stack web delivery stack**.  
-v0.2 仍然保持紧凑，但它已经不再只是一个通用工作流基础版，而开始成为一个更可信的 **Codex-first、Node-first 全栈 Web 交付栈**。
+v0.3 is where xstack stops feeling like a generic workflow baseline and starts feeling like a practical **Node-first workflow stack for Codex**.  
+v0.3 是 xstack 从“通用 workflow 基线”真正转向“面向 Codex 的实用 Node-first 工作流栈”的版本。
 
 ---
 
@@ -498,22 +494,19 @@ xstack is probably a worse fit if you want maximum improvisation and minimum pro
 
 ## Near-term roadmap / 近期路线图
 
-The next milestone is **v0.2**, focused on improving website frontend/backend development efficiency with:  
-下一个阶段重点是 **v0.2**，核心目标是提升网站前端/后端开发效率，主要包括：
+The current milestone is **v0.3**, focused on making xstack a clearer Node-first workflow stack with:  
+当前阶段重点是 **v0.3**，核心目标是让 xstack 更明确地成为一个 Node-first 工作流栈，主要包括：
 
-- `frontend-state-flow-pack`
-- `backend-api-pack`
-- `db-migration-pack`
-- `fullstack-contract-pack`
-- `form-flow-pack`
-- `auth-permission-pack`
-- `release-risk-pack`
-- `incident-response-pack`
-- `component-consistency-pack`
-- initial stack-specific support via `nextjs-app-pack`, `prisma-pack`, `nestjs-backend-pack`, `trpc-pack`, and `express-api-pack`  
-  并开始通过 `nextjs-app-pack`、`prisma-pack`、`nestjs-backend-pack`、`trpc-pack` 和 `express-api-pack` 提供第一批面向具体技术栈的支持
-- later web-focused reviews on top of those  
-  后续还会在此基础上继续补充 Web 专项审查能力
+- stack-specific support via `nextjs-app-pack`, `prisma-pack`, `nestjs-backend-pack`, `trpc-pack`, and `express-api-pack`  
+  通过 `nextjs-app-pack`、`prisma-pack`、`nestjs-backend-pack`、`trpc-pack` 和 `express-api-pack` 提供技术栈专项支持
+- stronger onboarding through install, doctor, quick start, and examples  
+  通过 install、doctor、quick start 和 examples 强化上手体验
+- real Node-first examples for frontend, full-stack, and backend flows  
+  提供覆盖前端、全栈和后端流程的真实 Node-first 示例
+- better release planning and release-ready documentation  
+  更好的版本规划和可发布文档体系
+- selective future expansion only where it improves real workflow quality  
+  只有在能真实提升工作流质量时，才继续扩展更多能力
 
 See [ROADMAP.md](./ROADMAP.md) for the fuller v0.2/v0.3 direction.  
 更完整的 v0.2 / v0.3 路线，请查看 [ROADMAP.md](./ROADMAP.md)。
