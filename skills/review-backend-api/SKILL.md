@@ -43,6 +43,7 @@ Always include:
 - Read `../../packs/release-risk-pack.md` when deciding whether the change is safe to ship.
 - Read `../../packs/fullstack-contract-pack.md` when frontend callers depend on the API behavior.
 - Read `../../packs/nextjs-app-pack.md` when the backend-facing change is implemented through Next.js route handlers, server actions, or mixed app-layer boundaries.
+- Read `../../packs/fastapi-backend-pack.md` when the backend-facing change is implemented in FastAPI with Pydantic models, dependencies, or route-level contract logic.
 - Read `../security-review/references/auth-checklist.md` when access control is central to the review.
 - Read `../security-review/references/data-exposure-checklist.md` when user or tenant data may leak.
 - Read `references/readiness-template.md` when a more formal backend review report is useful.
