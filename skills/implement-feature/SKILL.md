@@ -44,4 +44,5 @@ Always include:
 - Read `../../packs/prisma-pack.md` when implementing Prisma schema, relations, transactions, or database-heavy Node flows.
 - Read `../../packs/nestjs-backend-pack.md` when implementing NestJS controllers, services, DTOs, guards, providers, or module-layer logic.
 - Read `../../packs/trpc-pack.md` when implementing tRPC routers, procedures, Zod schemas, middleware, or mutation/query coordination.
+- Read `../../packs/express-api-pack.md` when implementing Express routes, middleware chains, request validation, or response/error handling.
 - Read `../../packs/db-migration-pack.md` when implementing schema or migration-related changes.

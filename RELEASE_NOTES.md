@@ -92,8 +92,8 @@ The project is not trying to simulate an entire org chart or become a giant prom
 
 ## Likely next areas / 下一步可能的方向
 
-- continue expanding Node-first stack-specific packs beyond `nextjs-app-pack`, `prisma-pack`, `nestjs-backend-pack`, and `trpc-pack`  
-  在 `nextjs-app-pack`、`prisma-pack`、`nestjs-backend-pack` 和 `trpc-pack` 之后，继续扩展更多 Node-first 的技术栈增强包
+- continue expanding Node-first stack-specific packs beyond `nextjs-app-pack`, `prisma-pack`, `nestjs-backend-pack`, `trpc-pack`, and `express-api-pack` only when they improve real workflow quality  
+  在 `nextjs-app-pack`、`prisma-pack`、`nestjs-backend-pack`、`trpc-pack` 和 `express-api-pack` 之后，只在能真实提升工作流质量时继续扩展更多 Node-first 技术栈增强包
 - stronger observability helpers beyond current incident-response support  
   在现有事故响应支持之上继续增强可观测性辅助能力
 - packaging and distribution for easier reuse  

@@ -49,3 +49,4 @@ Always include:
 - Read `../../packs/prisma-pack.md` when the task affects Prisma schema, relations, migrations, transactions, or database query shape.
 - Read `../../packs/nestjs-backend-pack.md` when the task targets a NestJS backend, DTO, guard, provider, controller, service, or module-level design choice.
 - Read `../../packs/trpc-pack.md` when the task targets a tRPC router, procedure, Zod schema, middleware, or client/server type contract.
+- Read `../../packs/express-api-pack.md` when the task targets an Express API, route/middleware structure, validation placement, or response-shape consistency.

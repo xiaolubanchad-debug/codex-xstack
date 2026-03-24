@@ -50,3 +50,4 @@ Always include:
 - Read `../../packs/prisma-pack.md` when release readiness depends on Prisma schema changes, migration safety, or database query behavior.
 - Read `../../packs/nestjs-backend-pack.md` when release readiness depends on NestJS validation, guards, exception behavior, or async side-effect wiring.
 - Read `../../packs/trpc-pack.md` when release readiness depends on tRPC schema changes, client/server contract stability, or query/mutation coordination.
+- Read `../../packs/express-api-pack.md` when release readiness depends on Express middleware behavior, response consistency, or route-level side effects.

@@ -115,6 +115,35 @@ _当前没有明确列出的 P2 待办项。_
   `nestjs-backend-pack` 已加入，用于加强 Node 后端在控制器、服务、模块、DTO、Guard 和 Provider 边界上的架构审查能力。
 - `trpc-pack` has been added to strengthen full-stack TypeScript review around routers, procedures, Zod schemas, middleware, and query/mutation coordination.  
   `trpc-pack` 已加入，用于加强全栈 TypeScript 在 router、procedure、Zod schema、middleware 以及 query/mutation 协调方面的审查能力。
+- `express-api-pack` has been added to strengthen lightweight Node API review around routes, middleware, validation placement, and response consistency.  
+  `express-api-pack` 已加入，用于加强轻量 Node API 在路由、middleware、验证放置位置和响应一致性方面的审查能力。
+
+## v0.3 direction / v0.3 方向
+
+xstack v0.3 should be the release where the project stops looking like a generic web workflow stack and becomes clearly **Node-first** in both packaging and positioning.  
+xstack v0.3 应该成为这样一个版本：项目不再像一个泛化的 Web workflow stack，而是无论在包装还是定位上，都更明确地成为一个 **Node-first** 的工作流栈。
+
+### v0.3 themes / v0.3 主题
+
+- strengthen Node-first stack support  
+  强化 Node-first 的技术栈支持
+- improve onboarding and examples for real Node teams  
+  改善面向真实 Node 团队的上手路径和示例
+- tighten release and review guidance around Node backend behavior  
+  强化围绕 Node 后端行为的发版与审查指导
+- position xstack more explicitly as a Node/TypeScript workflow stack  
+  更明确地把 xstack 定位成一个 Node/TypeScript 工作流栈
+
+### likely v0.3 work / 可能的 v0.3 工作
+
+- deeper Node-specific examples  
+  更深入的 Node 专项 examples
+- stronger install/onboarding flow  
+  更强的安装与上手流程
+- possible Node framework comparison guidance  
+  可能加入面向 Node 框架差异的指导
+- additional Node-first packs only when they improve real workflow quality  
+  只有在能真实提升工作流质量时，才继续新增更多 Node-first packs
 
 ## Implementation plan / 实施计划
 

@@ -508,8 +508,8 @@ The next milestone is **v0.2**, focused on improving website frontend/backend de
 - `release-risk-pack`
 - `incident-response-pack`
 - `component-consistency-pack`
-- initial stack-specific support via `nextjs-app-pack`, `prisma-pack`, `nestjs-backend-pack`, and `trpc-pack`  
-  并开始通过 `nextjs-app-pack`、`prisma-pack`、`nestjs-backend-pack` 和 `trpc-pack` 提供第一批面向具体技术栈的支持
+- initial stack-specific support via `nextjs-app-pack`, `prisma-pack`, `nestjs-backend-pack`, `trpc-pack`, and `express-api-pack`  
+  并开始通过 `nextjs-app-pack`、`prisma-pack`、`nestjs-backend-pack`、`trpc-pack` 和 `express-api-pack` 提供第一批面向具体技术栈的支持
 - later web-focused reviews on top of those  
   后续还会在此基础上继续补充 Web 专项审查能力
 
