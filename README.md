@@ -452,6 +452,8 @@ See the `examples/` directory for concrete starter flows:
 - `examples/frontend-feature.md`
 - `examples/backend-api-change.md`
 - `examples/fullstack-flow.md`
+- `examples/README.md` for the planned Node-first examples  
+  以及 `examples/README.md`，查看后续 Node-first 示例计划
 
 ---
 
@@ -513,8 +515,11 @@ The next milestone is **v0.2**, focused on improving website frontend/backend de
 - later web-focused reviews on top of those  
   后续还会在此基础上继续补充 Web 专项审查能力
 
-See [ROADMAP.md](./ROADMAP.md) for the fuller v0.2 plan.  
-更完整的 v0.2 路线，请查看 [ROADMAP.md](./ROADMAP.md)。
+See [ROADMAP.md](./ROADMAP.md) for the fuller v0.2/v0.3 direction.  
+更完整的 v0.2 / v0.3 路线，请查看 [ROADMAP.md](./ROADMAP.md)。
+
+For the next milestone framing, see [MILESTONE_v0.3.0.md](./MILESTONE_v0.3.0.md).  
+关于下一个里程碑的整理文案，请查看 [MILESTONE_v0.3.0.md](./MILESTONE_v0.3.0.md)。
 
 ---
 
