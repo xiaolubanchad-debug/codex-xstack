@@ -18,6 +18,8 @@ These examples already exist and are still useful as baseline flows:
 - `fullstack-flow.md`
 - `nextjs-prisma-feature-flow.md`
 - `nextjs-trpc-prisma-fullstack-flow.md`
+- `nest-prisma-backend-flow.md`
+- `express-prisma-api-flow.md`
 
 Use them when you want to understand the general xstack workflow before switching to stack-specific examples.  
 如果你想先理解 xstack 的通用工作流，再进入具体技术栈示例，可以先看这些文件。
@@ -81,6 +83,10 @@ You are building a full-stack TypeScript feature with shared procedure contracts
 
 ### 3. NestJS + Prisma backend flow
 
+**Status / 状态：**  
+Available now in `nest-prisma-backend-flow.md`.  
+已完成，文件见 `nest-prisma-backend-flow.md`。
+
 **Use when / 适用场景：**  
 You are building or changing a structured Node backend with NestJS and Prisma.  
 你正在用 NestJS + Prisma 构建或修改一个结构化 Node 后端。
@@ -103,6 +109,10 @@ You are building or changing a structured Node backend with NestJS and Prisma.
 ---
 
 ### 4. Express + Prisma API flow
+
+**Status / 状态：**  
+Available now in `express-prisma-api-flow.md`.  
+已完成，文件见 `express-prisma-api-flow.md`。
 
 **Use when / 适用场景：**  
 You are working on a lighter-weight Node API with Express and Prisma.  
