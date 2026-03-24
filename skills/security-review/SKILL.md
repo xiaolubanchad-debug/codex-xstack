@@ -40,4 +40,4 @@ Always include:
 - Read `../../packs/backend-api-pack.md` when the security review involves API contract, object access, or server actions.
 - Read `../../packs/fullstack-contract-pack.md` when frontend visibility and backend enforcement may diverge.
 - Read `../../packs/auth-permission-pack.md` when the review involves roles, ownership, tenant boundaries, or admin paths.
-- Read `../../packs/fastapi-backend-pack.md` when FastAPI dependencies, request models, or route-level auth patterns affect the security posture.
+- Read `../../packs/prisma-pack.md` when data access patterns, relation loading, tenant scoping, or transaction behavior affect the security posture.

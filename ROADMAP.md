@@ -109,8 +109,8 @@ _当前没有明确列出的 P2 待办项。_
   `component-consistency-pack` 已加入，用于增强重复 UI 模式质量和产品级前端一致性。
 - `nextjs-app-pack` is the first stack-specific pack, aimed at making xstack more effective on real Next.js projects.  
   `nextjs-app-pack` 是第一个面向具体技术栈的 pack，目标是让 xstack 在真实 Next.js 项目中更有效。
-- `fastapi-backend-pack` has been added as the first backend-oriented stack-specific pack, aimed at improving FastAPI contract, dependency, and release-readiness review.  
-  `fastapi-backend-pack` 已作为第一个偏后端的技术栈 pack 加入，用于提升 FastAPI 的契约审查、依赖结构判断和发版准备审查质量。
+- `prisma-pack` has been added as the first backend-oriented Node stack pack, aimed at improving Prisma schema, query-shape, transaction, and release-readiness review.  
+  `prisma-pack` 已作为第一个偏后端的 Node 技术栈 pack 加入，用于提升 Prisma 的 schema、查询结构、事务判断和发版准备审查质量。
 
 ## Implementation plan / 实施计划
 

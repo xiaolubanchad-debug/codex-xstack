@@ -2,8 +2,8 @@
 
 ## Summary / 概述
 
-xstack v0.2.0 is the first release where xstack becomes meaningfully **web-focused**.  
-xstack v0.2.0 是第一个明显开始朝 **Web 开发方向** 收拢的版本。
+xstack v0.2.0 is the first release where xstack becomes meaningfully **web-focused**, and the project is now clearly moving toward a **Node-first** direction.  
+xstack v0.2.0 是第一个明显开始朝 **Web 开发方向** 收拢的版本，同时项目也开始更明确地向 **Node-first** 路线发展。
 
 It keeps the core Codex delivery loop from v0.1:  
 它保留了 v0.1 中的核心 Codex 交付闭环：
@@ -92,8 +92,8 @@ The project is not trying to simulate an entire org chart or become a giant prom
 
 ## Likely next areas / 下一步可能的方向
 
-- expand stack-specific packs beyond the initial `nextjs-app-pack` and `fastapi-backend-pack` (Rails, Laravel, etc.)  
-  在第一版 `nextjs-app-pack` 和 `fastapi-backend-pack` 之后，继续扩展更多面向具体技术栈的增强包（如 Rails、Laravel 等）
+- expand Node-first stack-specific packs beyond the initial `nextjs-app-pack` and `prisma-pack`  
+  在第一版 `nextjs-app-pack` 和 `prisma-pack` 之后，继续扩展更多 Node-first 的技术栈增强包
 - stronger observability helpers beyond current incident-response support  
   在现有事故响应支持之上继续增强可观测性辅助能力
 - packaging and distribution for easier reuse  

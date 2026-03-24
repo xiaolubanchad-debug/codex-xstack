@@ -47,4 +47,4 @@ Always include:
 - Read `../../packs/release-risk-pack.md` when deciding whether a change is safe to ship.
 - Read `../../packs/incident-response-pack.md` when release readiness depends on understanding a recent incident, regression, or environment-specific failure.
 - Read `../../packs/nextjs-app-pack.md` when release readiness depends on Next.js routing, caching, revalidation, or client/server boundary behavior.
-- Read `../../packs/fastapi-backend-pack.md` when release readiness depends on FastAPI schemas, dependency behavior, async flows, or route-contract stability.
+- Read `../../packs/prisma-pack.md` when release readiness depends on Prisma schema changes, migration safety, or database query behavior.

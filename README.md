@@ -1,7 +1,7 @@
 # xstack
 
-> A Codex-first workflow stack for shipping software with more structure, less drift, and better judgment.  
-> 一个面向 Codex 的工作流栈，让软件交付更有结构、更少跑偏、更有判断力。
+> A Codex-first, Node-first workflow stack for shipping software with more structure, less drift, and better judgment.  
+> 一个面向 Codex、同时更聚焦 Node 技术栈的工作流栈，让软件交付更有结构、更少跑偏、更有判断力。
 
 **xstack** is a collection of focused skills that turn Codex from “a model that can edit files” into a more disciplined software delivery partner.  
 **xstack** 是一组聚焦型技能，让 Codex 从“能改文件的模型”变成一个更有纪律的软件交付搭档。
@@ -126,8 +126,8 @@ and adds a stronger website-development layer on top:
 - full-stack contract alignment / 前后端契约对齐
 - release-risk and incident-response support / 发版风险与事故响应支持
 
-v0.2 is still compact, but it is no longer just a generic workflow baseline. It is now a more credible **Codex-first full-stack web delivery stack**.  
-v0.2 仍然保持紧凑，但它已经不再只是一个通用工作流基础版，而开始成为一个更可信的 **Codex-first 全栈 Web 交付栈**。
+v0.2 is still compact, but it is no longer just a generic workflow baseline. It is now a more credible **Codex-first, Node-first full-stack web delivery stack**.  
+v0.2 仍然保持紧凑，但它已经不再只是一个通用工作流基础版，而开始成为一个更可信的 **Codex-first、Node-first 全栈 Web 交付栈**。
 
 ---
 
@@ -508,8 +508,8 @@ The next milestone is **v0.2**, focused on improving website frontend/backend de
 - `release-risk-pack`
 - `incident-response-pack`
 - `component-consistency-pack`
-- initial stack-specific support via `nextjs-app-pack` and `fastapi-backend-pack`  
-  并开始通过 `nextjs-app-pack` 和 `fastapi-backend-pack` 提供第一批面向具体技术栈的支持
+- initial stack-specific support via `nextjs-app-pack` and `prisma-pack`  
+  并开始通过 `nextjs-app-pack` 和 `prisma-pack` 提供第一批面向具体技术栈的支持
 - later web-focused reviews on top of those  
   后续还会在此基础上继续补充 Web 专项审查能力
 

@@ -41,5 +41,5 @@ Always include:
 - Read `../../packs/form-flow-pack.md` when implementing forms, wizards, settings, or modal submissions.
 - Read `../../packs/component-consistency-pack.md` when implementing repeated UI patterns, shared controls, or design-system-adjacent work.
 - Read `../../packs/nextjs-app-pack.md` when implementing work inside a Next.js app, especially around App Router, route handlers, or server actions.
-- Read `../../packs/fastapi-backend-pack.md` when implementing FastAPI routes, Pydantic schemas, dependencies, or async backend flows.
+- Read `../../packs/prisma-pack.md` when implementing Prisma schema, relations, transactions, or database-heavy Node flows.
 - Read `../../packs/db-migration-pack.md` when implementing schema or migration-related changes.
