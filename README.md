@@ -1,56 +1,110 @@
 # xstack
 
-xstack is a Codex-first skill stack for shipping software with structure.
+**xstack** is a Codex-first software delivery stack.
 
-It borrows the useful idea behind gstack — role-based workflows instead of one giant prompt — but is redesigned for Codex:
+It is inspired by the useful part of gstack — role-based workflows instead of one giant prompt — but rebuilt for Codex with a simpler shape, stronger guardrails, and more predictable outputs.
 
-- fewer, sharper skills
-- stable output formats
-- explicit guardrails
-- lightweight references instead of bloated prompts
-- a focus on plan → implement → review → validate
+xstack is for people who want Codex to behave less like an autocomplete engine and more like a disciplined software teammate.
 
-## Core design
+## What xstack is
 
-xstack treats Codex as a strong implementation agent that benefits from clear mode switches.
+xstack is a collection of focused skills for common software-delivery modes:
 
-Instead of one general-purpose workflow, xstack splits software work into five roles:
+- clarify the request
+- design the implementation
+- make the change
+- review the change
+- validate release readiness
+- investigate failures
+- assess security risk
+- document what shipped
+- evaluate UX quality
+- benchmark performance-sensitive work
+- switch into higher-caution modes when needed
 
-1. `plan-product` — clarify goals, scope, non-goals, and acceptance criteria
-2. `plan-engineering` — design implementation before editing code
-3. `implement-feature` — make focused code changes with validation discipline
-4. `review-change` — audit a diff for bugs, regressions, and risk
-5. `qa-release` — verify readiness, test coverage, and release risk
+## Design goals
 
-## Principles
+xstack is opinionated in a few specific ways:
 
-- Keep each skill single-purpose.
-- Prefer predictable output structures.
-- Stop and ask when requirements are ambiguous.
-- Read local code before proposing implementation details.
-- Avoid large blind edits.
-- Distinguish must-fix issues from optional polish.
-- Treat “code written” and “task complete” as different states.
+- **Codex-first**: written for Codex-style execution, not transplanted from Claude Code
+- **Role switching, not roleplay**: each skill changes the mode of work, not the personality for its own sake
+- **Stable outputs**: useful sections and checklists instead of vague essays
+- **Progressive disclosure**: `SKILL.md` stays lean; detailed checklists live in `references/`
+- **Guardrails over hype**: stop when requirements are unclear or risk expands beyond the original ask
+- **Plan → implement → review → validate**: xstack treats this as the default delivery loop
 
-## Suggested workflow
+## Version
 
-For feature work:
+Current milestone: **v0.1**
 
-1. Run `plan-product`
-2. Run `plan-engineering`
-3. Run `implement-feature`
-4. Run `review-change`
-5. Run `qa-release`
+v0.1 focuses on a practical baseline that one person or a small team can use immediately.
 
-For bug work:
+## Skill catalog
 
-1. Clarify reproduction and expected behavior
-2. Run `plan-engineering` if the fix touches multiple areas or is unclear
-3. Run `implement-feature`
-4. Run `review-change`
-5. Run `qa-release`
+### Core flow
 
-## Skill layout
+1. `plan-product` — turn a vague request into scope, value, non-goals, and acceptance criteria
+2. `plan-engineering` — inspect the codebase and design the implementation before coding
+3. `implement-feature` — make disciplined changes and validate them
+4. `review-change` — review a diff for correctness, regressions, and risk
+5. `qa-release` — decide whether a change is ready to ship
+
+### Extended flow
+
+6. `investigate-bug` — diagnose failures, narrow root causes, and define next checks
+7. `security-review` — assess auth, trust boundaries, data exposure, and abuse risk
+8. `design-review` — evaluate UX quality, interaction coherence, and “AI slop” risk
+9. `benchmark-change` — assess performance-sensitive changes and measurement gaps
+10. `document-release` — convert changes into release notes and operator-facing summaries
+
+### Control modes
+
+11. `careful-mode` — tighten change discipline for risky or unclear work
+12. `freeze-mode` — block broad edits and hold the line on scope while diagnosing or stabilizing
+13. `unfreeze-mode` — explicitly return to normal operating mode after a freeze-style task
+
+## Recommended workflows
+
+### Feature workflow
+
+1. `plan-product`
+2. `plan-engineering`
+3. `implement-feature`
+4. `review-change`
+5. `qa-release`
+6. `document-release` if the change will be shipped or announced
+
+### Bug workflow
+
+1. `investigate-bug`
+2. `plan-engineering` if the fix is non-trivial
+3. `implement-feature`
+4. `review-change`
+5. `qa-release`
+
+### Sensitive change workflow
+
+1. `careful-mode`
+2. `plan-engineering`
+3. `security-review` if auth, data, billing, or trust boundaries are involved
+4. `implement-feature`
+5. `review-change`
+6. `qa-release`
+
+## How to use xstack
+
+Use xstack skills as mode switches.
+
+Examples:
+
+- “Use `plan-product` to turn this idea into acceptance criteria.”
+- “Use `plan-engineering` and inspect the relevant code before proposing changes.”
+- “Use `implement-feature` and keep the change tightly scoped.”
+- “Use `review-change` on the current diff.”
+- “Use `qa-release` and tell me if this is safe to ship.”
+- “Use `investigate-bug` and narrow likely causes before proposing a fix.”
+
+## Repository layout
 
 ```text
 skills/
@@ -59,15 +113,43 @@ skills/
   implement-feature/
   review-change/
   qa-release/
+  investigate-bug/
+  security-review/
+  design-review/
+  benchmark-change/
+  document-release/
+  careful-mode/
+  freeze-mode/
+  unfreeze-mode/
 ```
 
 Each skill contains:
 
-- `SKILL.md` — trigger + workflow
-- `references/` — checklists and output patterns loaded only when needed
+- `SKILL.md` — triggering description and workflow
+- `references/` — checklists, templates, and patterns loaded only when needed
 
-## Naming
+## Product positioning
 
-The project name is **xstack**.
+xstack is not trying to be a complete company simulation.
 
-Use it as the umbrella name for the full Codex workflow stack. Skill names stay descriptive and task-oriented so Codex can trigger them reliably.
+It is a compact operating layer for real software work with Codex:
+
+- small enough to understand
+- strict enough to improve quality
+- modular enough to extend
+- practical enough to use daily
+
+## Near-term roadmap
+
+After v0.1, likely next additions are:
+
+- stronger repository-specific conventions
+- deployment-aware release gates
+- stack-specific reference packs (Next.js, FastAPI, Rails, etc.)
+- richer investigation and observability helpers
+
+## Name
+
+The product name is **xstack**.
+
+Use that name for the umbrella system, repository branding, and future packaged releases.
