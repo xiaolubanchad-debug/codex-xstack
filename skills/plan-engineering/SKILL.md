@@ -40,3 +40,7 @@ Always include:
 
 - Read `references/risk-checklist.md` when the task affects data models, auth, APIs, or cross-cutting behavior.
 - Read `references/validation-patterns.md` when the validation strategy is not obvious.
+- Read `../../packs/backend-api-pack.md` when the task changes APIs, handlers, server actions, or service contracts.
+- Read `../../packs/db-migration-pack.md` when the task changes schemas, migrations, indexes, or assumptions about old data.
+- Read `../../packs/fullstack-contract-pack.md` when the task spans frontend and backend behavior.
+- Read `../../packs/frontend-state-flow-pack.md` when the task changes user-facing page or mutation states.

@@ -37,3 +37,5 @@ Always include:
 
 - Read `references/auth-checklist.md` for access-control-heavy changes.
 - Read `references/data-exposure-checklist.md` when sensitive or user-specific data is involved.
+- Read `../../packs/backend-api-pack.md` when the security review involves API contract, object access, or server actions.
+- Read `../../packs/fullstack-contract-pack.md` when frontend visibility and backend enforcement may diverge.

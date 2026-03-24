@@ -37,3 +37,7 @@ Always include:
 
 - Read `references/manual-qa-checklist.md` when the change is user-facing.
 - Read `references/release-gates.md` when deciding whether to recommend ship.
+- Read `../../packs/frontend-state-flow-pack.md` when validating a user-facing flow.
+- Read `../../packs/backend-api-pack.md` when release readiness depends on API behavior or contract stability.
+- Read `../../packs/db-migration-pack.md` when release readiness depends on schema, migration, or old-data safety.
+- Read `../../packs/fullstack-contract-pack.md` when the release spans frontend and backend behavior.

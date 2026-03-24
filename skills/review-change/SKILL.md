@@ -38,3 +38,7 @@ Always include:
 
 - Read `references/common-risk-patterns.md` for a checklist of frequent failure modes.
 - Read `references/review-template.md` when a formal report format is useful.
+- Read `../../packs/backend-api-pack.md` when reviewing API or backend-contract changes.
+- Read `../../packs/db-migration-pack.md` when reviewing persistence or migration changes.
+- Read `../../packs/fullstack-contract-pack.md` when reviewing features that span UI and backend.
+- Read `../../packs/frontend-state-flow-pack.md` when reviewing user-facing stateful flows.

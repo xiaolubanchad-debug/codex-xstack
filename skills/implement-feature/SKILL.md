@@ -37,3 +37,5 @@ Always include:
 
 - Read `references/change-discipline.md` when a task risks scope creep.
 - Read `references/handoff-template.md` when preparing a final implementation summary.
+- Read `../../packs/frontend-state-flow-pack.md` when implementing user-facing pages, components, or mutation flows.
+- Read `../../packs/db-migration-pack.md` when implementing schema or migration-related changes.

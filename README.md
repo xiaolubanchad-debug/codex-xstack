@@ -242,13 +242,15 @@ xstack is probably a worse fit if you want maximum improvisation and minimum pro
 
 ## Near-term roadmap
 
-Likely next steps after v0.1:
+The next milestone is **v0.2**, focused on improving website frontend/backend development efficiency with:
 
-- repository-specific conventions packs
-- deployment-aware release gates
-- stack-specific reference bundles (Next.js, FastAPI, Rails, Laravel, etc.)
-- stronger observability and incident-response helpers
-- packaging and distribution for easier reuse
+- `frontend-state-flow-pack`
+- `backend-api-pack`
+- `db-migration-pack`
+- `fullstack-contract-pack`
+- later web-focused packs and reviews on top of those
+
+See [ROADMAP.md](./ROADMAP.md) for the fuller v0.2 plan.
 
 ---
 
