@@ -35,3 +35,4 @@ Always include:
 
 - Read `references/release-note-templates.md` when the audience or format is unclear.
 - Read `../../packs/fullstack-contract-pack.md` when the release note needs to explain cross-layer frontend/backend changes.
+- Read `../../packs/release-risk-pack.md` when the release note should call out rollout concerns, operator watchpoints, or post-deploy checks.

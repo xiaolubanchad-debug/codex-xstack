@@ -27,4 +27,5 @@ When active, include:
 
 ## References
 
-Read `references/high-risk-triggers.md` when judging whether to tighten behavior further.
+- Read `references/high-risk-triggers.md` when judging whether to tighten behavior further.
+- Read `../../packs/release-risk-pack.md` when the task involves production rollout, migrations, API changes, or cross-layer risk.

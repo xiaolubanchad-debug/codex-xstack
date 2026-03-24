@@ -44,3 +44,4 @@ Always include:
 - Read `../../packs/db-migration-pack.md` when the task changes schemas, migrations, indexes, or assumptions about old data.
 - Read `../../packs/fullstack-contract-pack.md` when the task spans frontend and backend behavior.
 - Read `../../packs/frontend-state-flow-pack.md` when the task changes user-facing page or mutation states.
+- Read `../../packs/auth-permission-pack.md` when the task changes roles, ownership, tenant scope, or access rules.

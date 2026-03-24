@@ -42,3 +42,6 @@ Always include:
 - Read `../../packs/db-migration-pack.md` when reviewing persistence or migration changes.
 - Read `../../packs/fullstack-contract-pack.md` when reviewing features that span UI and backend.
 - Read `../../packs/frontend-state-flow-pack.md` when reviewing user-facing stateful flows.
+- Read `../../packs/form-flow-pack.md` when reviewing forms or submit-heavy user flows.
+- Read `../../packs/auth-permission-pack.md` when reviewing access-control or tenant-scoped changes.
+- Read `../../packs/release-risk-pack.md` when reviewing production-sensitive or multi-layer changes.

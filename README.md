@@ -248,7 +248,10 @@ The next milestone is **v0.2**, focused on improving website frontend/backend de
 - `backend-api-pack`
 - `db-migration-pack`
 - `fullstack-contract-pack`
-- later web-focused packs and reviews on top of those
+- `form-flow-pack`
+- `auth-permission-pack`
+- `release-risk-pack`
+- later web-focused reviews on top of those
 
 See [ROADMAP.md](./ROADMAP.md) for the fuller v0.2 plan.
 
