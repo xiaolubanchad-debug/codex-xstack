@@ -17,6 +17,7 @@ These examples already exist and are still useful as baseline flows:
 - `backend-api-change.md`
 - `fullstack-flow.md`
 - `nextjs-prisma-feature-flow.md`
+- `nextjs-trpc-prisma-fullstack-flow.md`
 
 Use them when you want to understand the general xstack workflow before switching to stack-specific examples.  
 如果你想先理解 xstack 的通用工作流，再进入具体技术栈示例，可以先看这些文件。
@@ -52,6 +53,10 @@ You are building a user-facing feature in a Next.js app backed by Prisma.
 ---
 
 ### 2. Next.js + tRPC + Prisma full-stack flow
+
+**Status / 状态：**  
+Available now in `nextjs-trpc-prisma-fullstack-flow.md`.  
+已完成，文件见 `nextjs-trpc-prisma-fullstack-flow.md`。
 
 **Use when / 适用场景：**  
 You are building a full-stack TypeScript feature with shared procedure contracts.  
