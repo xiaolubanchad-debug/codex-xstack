@@ -47,3 +47,4 @@ Always include:
 - Read `../../packs/auth-permission-pack.md` when the task changes roles, ownership, tenant scope, or access rules.
 - Read `../../packs/nextjs-app-pack.md` when the task targets a Next.js app, App Router flow, server action, route handler, or mixed client/server boundary.
 - Read `../../packs/prisma-pack.md` when the task affects Prisma schema, relations, migrations, transactions, or database query shape.
+- Read `../../packs/nestjs-backend-pack.md` when the task targets a NestJS backend, DTO, guard, provider, controller, service, or module-level design choice.

@@ -41,3 +41,4 @@ Always include:
 - Read `../../packs/fullstack-contract-pack.md` when frontend visibility and backend enforcement may diverge.
 - Read `../../packs/auth-permission-pack.md` when the review involves roles, ownership, tenant boundaries, or admin paths.
 - Read `../../packs/prisma-pack.md` when data access patterns, relation loading, tenant scoping, or transaction behavior affect the security posture.
+- Read `../../packs/nestjs-backend-pack.md` when guards, decorators, providers, or module structure affect auth and permission enforcement.

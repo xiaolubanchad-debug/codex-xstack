@@ -111,6 +111,8 @@ _当前没有明确列出的 P2 待办项。_
   `nextjs-app-pack` 是第一个面向具体技术栈的 pack，目标是让 xstack 在真实 Next.js 项目中更有效。
 - `prisma-pack` has been added as the first backend-oriented Node stack pack, aimed at improving Prisma schema, query-shape, transaction, and release-readiness review.  
   `prisma-pack` 已作为第一个偏后端的 Node 技术栈 pack 加入，用于提升 Prisma 的 schema、查询结构、事务判断和发版准备审查质量。
+- `nestjs-backend-pack` has been added to strengthen Node backend architecture review around controllers, services, modules, DTOs, guards, and provider boundaries.  
+  `nestjs-backend-pack` 已加入，用于加强 Node 后端在控制器、服务、模块、DTO、Guard 和 Provider 边界上的架构审查能力。
 
 ## Implementation plan / 实施计划
 

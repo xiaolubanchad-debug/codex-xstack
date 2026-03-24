@@ -42,4 +42,5 @@ Always include:
 - Read `../../packs/component-consistency-pack.md` when implementing repeated UI patterns, shared controls, or design-system-adjacent work.
 - Read `../../packs/nextjs-app-pack.md` when implementing work inside a Next.js app, especially around App Router, route handlers, or server actions.
 - Read `../../packs/prisma-pack.md` when implementing Prisma schema, relations, transactions, or database-heavy Node flows.
+- Read `../../packs/nestjs-backend-pack.md` when implementing NestJS controllers, services, DTOs, guards, providers, or module-layer logic.
 - Read `../../packs/db-migration-pack.md` when implementing schema or migration-related changes.
