@@ -39,6 +39,7 @@ Always include:
 - Read `references/release-gates.md` when deciding whether to recommend ship.
 - Read `../../packs/frontend-state-flow-pack.md` when validating a user-facing flow.
 - Read `../../packs/form-flow-pack.md` when validating forms, submissions, settings, or modal flows.
+- Read `../../packs/component-consistency-pack.md` when release readiness depends on consistent repeated UI patterns across a page or flow.
 - Read `../../packs/backend-api-pack.md` when release readiness depends on API behavior or contract stability.
 - Read `../../packs/db-migration-pack.md` when release readiness depends on schema, migration, or old-data safety.
 - Read `../../packs/fullstack-contract-pack.md` when the release spans frontend and backend behavior.

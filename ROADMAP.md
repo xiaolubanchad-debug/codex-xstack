@@ -82,13 +82,14 @@ Improve frontend/backend collaboration by checking:
 
 ### P2 — later
 
-- component-consistency-pack
+_No open P2 items currently listed._
 
 ### In progress / landed after initial v0.2 planning
 
 - `review-frontend-flow` has been added as the first dedicated web-focused review skill.
 - `review-backend-api` has been added as the backend counterpart for contract, auth, data, and release-readiness review.
 - `incident-response-pack` has been added to strengthen production incident triage and mitigation reasoning.
+- `component-consistency-pack` has been added to improve repeated UI pattern quality and product-level frontend coherence.
 
 ## Implementation plan
 
