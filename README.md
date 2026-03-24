@@ -78,15 +78,26 @@ That means:
 
 ---
 
-## v0.1 scope
+## v0.2 scope
 
-xstack v0.1 is the practical baseline.
+xstack v0.2 is the first release where the stack starts feeling intentionally **web-focused**.
 
-It is designed for solo builders and small teams who want a clean software-delivery loop with Codex:
+It keeps the core delivery loop:
 
 **plan → implement → review → validate → communicate**
 
-This version focuses on workflow quality, not ecosystem sprawl.
+and adds a stronger website-development layer on top:
+
+- frontend state coverage
+- form-flow quality
+- component consistency
+- backend API contract discipline
+- auth and permission review
+- migration safety
+- full-stack contract alignment
+- release-risk and incident-response support
+
+v0.2 is still compact, but it is no longer just a generic workflow baseline. It is now a more credible **Codex-first full-stack web delivery stack**.
 
 ---
 
