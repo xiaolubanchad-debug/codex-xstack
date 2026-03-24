@@ -131,6 +131,9 @@ Turn technical changes into clear release notes, operator updates, and stakehold
 #### `review-frontend-flow`
 Review a user-facing flow for state completeness, form behavior, UX quality, and frontend/backend alignment.
 
+#### `review-backend-api`
+Review an API or backend-facing change for contract quality, compatibility, authorization, data safety, and release risk.
+
 ### Control modes
 
 #### `careful-mode`
@@ -206,6 +209,7 @@ skills/
   benchmark-change/
   document-release/
   review-frontend-flow/
+  review-backend-api/
   careful-mode/
   freeze-mode/
   unfreeze-mode/

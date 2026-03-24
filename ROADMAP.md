@@ -84,11 +84,11 @@ Improve frontend/backend collaboration by checking:
 
 - component-consistency-pack
 - incident-response-pack
-- review-backend-api skill
 
 ### In progress / landed after initial v0.2 planning
 
 - `review-frontend-flow` has been added as the first dedicated web-focused review skill.
+- `review-backend-api` has been added as the backend counterpart for contract, auth, data, and release-readiness review.
 
 ## Implementation plan
 
