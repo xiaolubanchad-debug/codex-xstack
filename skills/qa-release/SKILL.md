@@ -44,3 +44,4 @@ Always include:
 - Read `../../packs/fullstack-contract-pack.md` when the release spans frontend and backend behavior.
 - Read `../../packs/auth-permission-pack.md` when the release changes access rules, object scope, or tenant visibility.
 - Read `../../packs/release-risk-pack.md` when deciding whether a change is safe to ship.
+- Read `../../packs/incident-response-pack.md` when release readiness depends on understanding a recent incident, regression, or environment-specific failure.

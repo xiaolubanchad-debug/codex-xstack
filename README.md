@@ -261,6 +261,7 @@ The next milestone is **v0.2**, focused on improving website frontend/backend de
 - `form-flow-pack`
 - `auth-permission-pack`
 - `release-risk-pack`
+- `incident-response-pack`
 - later web-focused reviews on top of those
 
 See [ROADMAP.md](./ROADMAP.md) for the fuller v0.2 plan.

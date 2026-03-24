@@ -29,3 +29,4 @@ When active, include:
 
 - Read `references/high-risk-triggers.md` when judging whether to tighten behavior further.
 - Read `../../packs/release-risk-pack.md` when the task involves production rollout, migrations, API changes, or cross-layer risk.
+- Read `../../packs/incident-response-pack.md` when the task follows an incident, regression, outage, or uncertain production failure.

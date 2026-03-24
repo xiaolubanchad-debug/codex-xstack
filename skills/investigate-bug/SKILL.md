@@ -38,3 +38,4 @@ Always include:
 
 - Read `references/triage-checklist.md` for a general bug triage pass.
 - Read `references/root-cause-patterns.md` when the failure mode is still unclear.
+- Read `../../packs/incident-response-pack.md` when the issue is production-facing, environment-specific, operational, or time-correlated with deploy/config/data changes.
