@@ -524,6 +524,9 @@ For the next milestone framing, see [MILESTONE_v0.3.0.md](./MILESTONE_v0.3.0.md)
 For a release-oriented execution checklist, see [RELEASE_PLAN_v0.3.0.md](./RELEASE_PLAN_v0.3.0.md).  
 如果你想看更接近发布执行层的清单，请查看 [RELEASE_PLAN_v0.3.0.md](./RELEASE_PLAN_v0.3.0.md)。
 
+For a GitHub-ready bilingual release draft, see [GITHUB_RELEASE_v0.3.0.md](./GITHUB_RELEASE_v0.3.0.md).  
+如果你想直接使用适合 GitHub Release 的中英双语文案，请查看 [GITHUB_RELEASE_v0.3.0.md](./GITHUB_RELEASE_v0.3.0.md)。
+
 ---
 
 ## Positioning in one sentence / 一句话定位
