@@ -258,6 +258,18 @@ Likely next steps after v0.1:
 
 ---
 
+## Contributing
+
+See [CONTRIBUTING.md](./CONTRIBUTING.md) for contribution guidelines.
+
+## Release notes
+
+See [RELEASE_NOTES.md](./RELEASE_NOTES.md) for the current public baseline notes.
+
+## License
+
+MIT — see [LICENSE](./LICENSE).
+
 ## Name
 
 The product name is **xstack**.
