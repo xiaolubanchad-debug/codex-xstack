@@ -45,6 +45,7 @@ Always include:
 - Read `../../packs/nextjs-app-pack.md` when the backend-facing change is implemented through Next.js route handlers, server actions, or mixed app-layer boundaries.
 - Read `../../packs/prisma-pack.md` when the backend-facing change depends on Prisma schema, query shape, transactions, or relation handling.
 - Read `../../packs/nestjs-backend-pack.md` when the backend-facing change depends on NestJS DTOs, guards, providers, exception behavior, or controller/service/module structure.
+- Read `../../packs/trpc-pack.md` when the backend-facing change depends on tRPC routers, procedures, Zod schemas, middleware, or output shape coordination.
 - Read `../security-review/references/auth-checklist.md` when access control is central to the review.
 - Read `../security-review/references/data-exposure-checklist.md` when user or tenant data may leak.
 - Read `references/readiness-template.md` when a more formal backend review report is useful.

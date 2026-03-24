@@ -113,6 +113,8 @@ _当前没有明确列出的 P2 待办项。_
   `prisma-pack` 已作为第一个偏后端的 Node 技术栈 pack 加入，用于提升 Prisma 的 schema、查询结构、事务判断和发版准备审查质量。
 - `nestjs-backend-pack` has been added to strengthen Node backend architecture review around controllers, services, modules, DTOs, guards, and provider boundaries.  
   `nestjs-backend-pack` 已加入，用于加强 Node 后端在控制器、服务、模块、DTO、Guard 和 Provider 边界上的架构审查能力。
+- `trpc-pack` has been added to strengthen full-stack TypeScript review around routers, procedures, Zod schemas, middleware, and query/mutation coordination.  
+  `trpc-pack` 已加入，用于加强全栈 TypeScript 在 router、procedure、Zod schema、middleware 以及 query/mutation 协调方面的审查能力。
 
 ## Implementation plan / 实施计划
 
