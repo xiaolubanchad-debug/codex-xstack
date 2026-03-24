@@ -303,6 +303,112 @@ This keeps the main skill files compact while still allowing deeper guidance whe
 
 ---
 
+## Installation / 安装
+
+xstack is currently a **repository-based skill stack**, not a packaged CLI.  
+xstack 目前还是一个**基于仓库组织的技能栈**，还不是一个打包好的 CLI 产品。
+
+The safest installation method today is to clone the repository and either:  
+当前最稳妥的安装方式，是先克隆仓库，然后选择以下两种方式之一：
+
+1. keep it where your Codex workflow can read it directly, or  
+   保留在你的 Codex 工作流可以直接读取的位置；或者
+2. install `skills/` and `packs/` into a target directory with the helper script.  
+   使用安装脚本，把 `skills/` 和 `packs/` 安装到目标目录。
+
+### Clone the repository / 克隆仓库
+
+```bash
+git clone https://github.com/xiaolubanchad-debug/codex-agent.git
+cd codex-agent
+```
+
+### Use the install script / 使用安装脚本
+
+```bash
+./scripts/install.sh <target-dir>
+```
+
+Example / 示例：
+
+```bash
+./scripts/install.sh ~/my-codex/xstack
+```
+
+What this does / 这个脚本会做什么：
+
+- copy `skills/` into the target directory  
+  把 `skills/` 复制到目标目录
+- copy `packs/` into the target directory  
+  把 `packs/` 复制到目标目录
+- preserve the relative paths required by the `SKILL.md` references  
+  保留 `SKILL.md` 里依赖的相对路径关系
+
+What it does **not** do / 它**不会**做的事情：
+
+- guess your Codex runtime's skill directory automatically  
+  不会自动猜测你本地 Codex 的技能目录
+- modify your editor or Codex runtime configuration for you  
+  不会自动修改你的编辑器或 Codex 运行时配置
+
+So after installation, point your Codex setup at the directory you installed xstack into.  
+所以安装完成后，你还需要把自己的 Codex 配置指向这个目录。
+
+---
+
+## Usage / 使用方式
+
+Use xstack as a set of explicit work modes for Codex.  
+把 xstack 当成一组明确的 Codex 工作模式来使用。
+
+### Minimal feature workflow / 最小功能开发流程
+
+1. `plan-product`
+2. `plan-engineering`
+3. `implement-feature`
+4. `review-change`
+5. `qa-release`
+
+### For frontend work / 做前端时
+
+Add:  
+额外加入：
+
+- `review-frontend-flow`
+- `design-review`
+
+### For backend/API work / 做后端或 API 时
+
+Add:  
+额外加入：
+
+- `review-backend-api`
+- `security-review`
+
+### Example prompts / 示例提示词
+
+```text
+Use plan-product to turn this feature idea into scope and acceptance criteria.
+用 plan-product 把这个功能想法整理成范围和验收标准。
+
+Use plan-engineering and inspect the repo before proposing implementation steps.
+用 plan-engineering，在给出实现步骤前先检查仓库。
+
+Use implement-feature and keep the change tightly scoped.
+用 implement-feature，并把改动范围控制紧。
+
+Use review-frontend-flow on this page change.
+对这个页面改动使用 review-frontend-flow。
+
+Use review-backend-api on this API diff.
+对这个 API diff 使用 review-backend-api。
+
+Use qa-release and tell me whether this is safe to ship.
+用 qa-release 判断这次改动是否适合上线。
+```
+
+---
+
 ## Design principles / 设计原则
 
 xstack follows a few rules consistently:  
