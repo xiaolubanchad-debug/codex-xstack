@@ -16,6 +16,7 @@ These examples already exist and are still useful as baseline flows:
 - `frontend-feature.md`
 - `backend-api-change.md`
 - `fullstack-flow.md`
+- `nextjs-prisma-feature-flow.md`
 
 Use them when you want to understand the general xstack workflow before switching to stack-specific examples.  
 如果你想先理解 xstack 的通用工作流，再进入具体技术栈示例，可以先看这些文件。
@@ -25,6 +26,10 @@ Use them when you want to understand the general xstack workflow before switchin
 ## Planned Node-first examples / 计划中的 Node-first 示例
 
 ### 1. Next.js + Prisma feature flow
+
+**Status / 状态：**  
+Available now in `nextjs-prisma-feature-flow.md`.  
+已完成，文件见 `nextjs-prisma-feature-flow.md`。
 
 **Use when / 适用场景：**  
 You are building a user-facing feature in a Next.js app backed by Prisma.  
