@@ -303,6 +303,43 @@ This keeps the main skill files compact while still allowing deeper guidance whe
 
 ---
 
+## Quick Start / 快速开始
+
+If you only want the shortest path to trying xstack, do this:  
+如果你只想用最短路径试一下 xstack，可以这样做：
+
+1. clone the repo / 克隆仓库
+2. run `./scripts/install.sh <target-dir>` / 运行 `./scripts/install.sh <target-dir>`
+3. start with these skills:  
+   从这几个 skill 开始：
+   - `plan-engineering`
+   - `review-change`
+   - `qa-release`
+4. if you are doing frontend work, add `review-frontend-flow`  
+   如果你做的是前端任务，再加上 `review-frontend-flow`
+5. if you are doing backend/API work, add `review-backend-api`  
+   如果你做的是后端/API 任务，再加上 `review-backend-api`
+
+### First 10 minutes / 前 10 分钟上手
+
+Try this exact prompt with Codex:  
+你可以直接把下面这段提示词丢给 Codex：
+
+```text
+Use plan-engineering to inspect the repo and propose the smallest sound implementation plan.
+After implementation, use review-change and qa-release before calling the task done.
+```
+
+```text
+用 plan-engineering 检查仓库，并提出最小但靠谱的实现方案。
+实现完成后，用 review-change 和 qa-release 再判断任务是否真的完成。
+```
+
+That single flow is enough to feel what xstack is trying to improve.  
+光这一条流程，通常就足以让你感受到 xstack 想改善的是什么。
+
+---
+
 ## Installation / 安装
 
 xstack is currently a **repository-based skill stack**, not a packaged CLI.  
@@ -406,6 +443,15 @@ Use review-backend-api on this API diff.
 Use qa-release and tell me whether this is safe to ship.
 用 qa-release 判断这次改动是否适合上线。
 ```
+
+### Real examples / 真实示例
+
+See the `examples/` directory for concrete starter flows:  
+你可以在 `examples/` 目录里看到更具体的起步示例：
+
+- `examples/frontend-feature.md`
+- `examples/backend-api-change.md`
+- `examples/fullstack-flow.md`
 
 ---
 
