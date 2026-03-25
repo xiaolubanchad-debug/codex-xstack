@@ -450,6 +450,7 @@ Bad usage usually looks like:
 - `ANTI_PATTERNS.md`
 - `examples/README.md`
 - `examples/recommend-usage.md`
+- `examples/prompt-starters.md`
 - `SKILLS_INDEX.md`
 - `PACKS_INDEX.md`
 
