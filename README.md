@@ -396,10 +396,11 @@ If you want a heuristic starting recommendation based on a task or stack query, 
 
 ```bash
 ./scripts/recommend.sh "nextjs prisma feature"
-./scripts/recommend.sh "backend api auth permissions"
+./scripts/recommend.sh --task feature --stack "nextjs prisma"
+./scripts/recommend.sh --task backend --stack "nestjs prisma" --risk sensitive --json
 ```
 
-如果你修改了 metadata，请运行上面的命令来重新生成索引并做一致性校验。你也可以用 `recommend.sh` 根据任务或技术栈关键词得到一个启发式起步建议。
+如果你修改了 metadata，请运行上面的命令来重新生成索引并做一致性校验。你也可以用 `recommend.sh` 根据自由文本或结构化参数得到一个启发式起步建议。
 
 ---
 

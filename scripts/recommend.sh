@@ -7,13 +7,21 @@ cd "$ROOT_DIR"
 usage() {
   cat <<'EOF'
 Usage:
-  ./scripts/recommend.sh <query>
+  ./scripts/recommend.sh [options] [freeform query]
+
+Options:
+  --task <type>     Task type, e.g. feature|bug|review|release|frontend|backend
+  --stack <value>   Stack hint, e.g. "nextjs prisma" or "nestjs prisma"
+  --risk <level>    Risk hint, e.g. low|medium|high|sensitive|freeze
+  --json            Output JSON instead of formatted text
+  -h, --help        Show help
 
 Examples:
   ./scripts/recommend.sh "nextjs prisma feature"
-  ./scripts/recommend.sh "backend api auth permissions"
-  ./scripts/recommend.sh "bug incident freeze"
-  ./scripts/recommend.sh "frontend form flow"
+  ./scripts/recommend.sh --task feature --stack "nextjs prisma"
+  ./scripts/recommend.sh --task backend --stack "express prisma" --risk high
+  ./scripts/recommend.sh --task bug --risk freeze
+  ./scripts/recommend.sh --task backend --stack "nestjs prisma" --risk sensitive --json
 
 What it does:
   - Suggests a starting skill flow
@@ -22,30 +30,77 @@ What it does:
 
 Notes:
   - This is a heuristic prototype, not a full planner.
-  - It uses simple keyword matching plus xstack metadata.
+  - It uses keyword matching plus xstack metadata.
 EOF
 }
 
-if [[ $# -eq 0 ]]; then
+TASK=""
+STACK=""
+RISK=""
+JSON_OUTPUT=0
+POSITIONAL=()
+
+while [[ $# -gt 0 ]]; do
+  case "$1" in
+    --task)
+      [[ $# -ge 2 ]] || { echo "Missing value for --task" >&2; exit 1; }
+      TASK="$2"
+      shift 2
+      ;;
+    --stack)
+      [[ $# -ge 2 ]] || { echo "Missing value for --stack" >&2; exit 1; }
+      STACK="$2"
+      shift 2
+      ;;
+    --risk)
+      [[ $# -ge 2 ]] || { echo "Missing value for --risk" >&2; exit 1; }
+      RISK="$2"
+      shift 2
+      ;;
+    --json)
+      JSON_OUTPUT=1
+      shift
+      ;;
+    -h|--help)
+      usage
+      exit 0
+      ;;
+    *)
+      POSITIONAL+=("$1")
+      shift
+      ;;
+  esac
+done
+
+FREEFORM_QUERY="${POSITIONAL[*]:-}"
+
+if [[ -z "$FREEFORM_QUERY" && -z "$TASK" && -z "$STACK" && -z "$RISK" ]]; then
   usage
   exit 1
 fi
 
-if [[ "${1:-}" == "-h" || "${1:-}" == "--help" ]]; then
-  usage
-  exit 0
-fi
-
-QUERY="$*"
-
-python3 - "$QUERY" <<'PY'
+python3 - "$FREEFORM_QUERY" "$TASK" "$STACK" "$RISK" "$JSON_OUTPUT" <<'PY'
 import glob
 import json
-import os
 import re
 import sys
 
-query = sys.argv[1].lower()
+freeform_query = sys.argv[1].strip()
+task = sys.argv[2].strip().lower()
+stack = sys.argv[3].strip().lower()
+risk = sys.argv[4].strip().lower()
+json_output = sys.argv[5] == '1'
+
+parts = []
+if freeform_query:
+    parts.append(freeform_query)
+if task:
+    parts.append(task)
+if stack:
+    parts.append(stack)
+if risk:
+    parts.append(risk)
+query = ' '.join(parts).strip().lower()
 words = set(re.findall(r"[a-z0-9+.-]+", query))
 
 skill_meta = {}
@@ -82,22 +137,30 @@ def add_pack(names, points, reason):
 def has_any(*tokens):
     return any(token in query or token in words for token in tokens)
 
+
+def task_is(*values):
+    return task in values
+
+
+def risk_is(*values):
+    return risk in values
+
 # task type
-if has_any('feature', 'build', 'new feature', 'implement'):
+if task_is('feature') or has_any('feature', 'build', 'new feature', 'implement'):
     add_skill(['plan-product', 'plan-engineering', 'implement-feature', 'review-change', 'qa-release'], 4, 'Detected feature-building intent.')
 
-if has_any('bug', 'fix', 'incident', 'regression', 'broken', 'debug'):
+if task_is('bug') or has_any('bug', 'fix', 'incident', 'regression', 'broken', 'debug'):
     add_skill(['investigate-bug', 'plan-engineering', 'implement-feature', 'review-change', 'qa-release'], 5, 'Detected bug-fix or investigation intent.')
 
-if has_any('review', 'diff', 'audit', 'check'):
+if task_is('review') or has_any('review', 'diff', 'audit', 'check'):
     add_skill(['review-change'], 4, 'Detected review-oriented intent.')
 
-if has_any('release', 'ship', 'deploy', 'rollout'):
+if task_is('release') or has_any('release', 'ship', 'deploy', 'rollout'):
     add_skill(['qa-release', 'document-release'], 4, 'Detected release-oriented intent.')
     add_pack(['release-risk-pack'], 3, 'Release keywords suggest rollout-risk attention.')
 
 # frontend / backend / UX
-if has_any('frontend', 'ui', 'ux', 'page', 'component', 'screen'):
+if task_is('frontend') or has_any('frontend', 'ui', 'ux', 'page', 'component', 'screen'):
     add_skill(['review-frontend-flow'], 5, 'Detected frontend or UI-oriented work.')
     add_pack(['frontend-state-flow-pack', 'component-consistency-pack'], 4, 'Frontend work benefits from state and consistency checks.')
 
@@ -105,12 +168,12 @@ if has_any('form', 'submit', 'validation'):
     add_pack(['form-flow-pack'], 5, 'Form-related work benefits from form-flow checks.')
     add_skill(['review-frontend-flow'], 2, 'Form work often needs a frontend flow review.')
 
-if has_any('backend', 'api', 'endpoint', 'controller', 'handler', 'service'):
+if task_is('backend') or has_any('backend', 'api', 'endpoint', 'controller', 'handler', 'service'):
     add_skill(['review-backend-api'], 5, 'Detected backend or API-oriented work.')
     add_pack(['backend-api-pack'], 4, 'Backend/API work benefits from contract-focused review.')
 
 # security / permissions
-if has_any('auth', 'permission', 'permissions', 'role', 'roles', 'tenant', 'billing', 'security', 'secure', 'ownership'):
+if risk_is('high', 'sensitive') or has_any('auth', 'permission', 'permissions', 'role', 'roles', 'tenant', 'billing', 'security', 'secure', 'ownership'):
     add_skill(['security-review', 'review-backend-api'], 6, 'Detected auth, permission, or trust-boundary risk.')
     add_pack(['auth-permission-pack'], 5, 'Auth and permission work benefits from dedicated auth/permission checks.')
 
@@ -137,34 +200,31 @@ if has_any('express'):
     add_skill(['review-backend-api'], 2, 'Express work often benefits from route and middleware review.')
 
 # fullstack / integration
-if has_any('fullstack', 'full-stack', 'client server', 'frontend backend', 'contract'):
+if task_is('fullstack') or has_any('fullstack', 'full-stack', 'client server', 'frontend backend', 'contract'):
     add_pack(['fullstack-contract-pack'], 6, 'Detected cross-layer or contract-alignment work.')
     add_skill(['review-frontend-flow', 'review-backend-api'], 3, 'Full-stack work benefits from both frontend and backend review.')
 
 # risk control
-if has_any('risky', 'sensitive', 'high-impact', 'ambiguous', 'careful'):
+if risk_is('high', 'sensitive') or has_any('risky', 'sensitive', 'high-impact', 'ambiguous', 'careful'):
     add_skill(['careful-mode'], 7, 'Detected risky or ambiguous work.')
     add_pack(['release-risk-pack'], 4, 'Risk-sensitive work benefits from explicit release-risk thinking.')
 
-if has_any('freeze', 'containment', 'stabilize', 'stabilization'):
+if risk_is('freeze') or has_any('freeze', 'containment', 'stabilize', 'stabilization'):
     add_skill(['freeze-mode', 'investigate-bug'], 7, 'Detected freeze or stabilization intent.')
     add_pack(['incident-response-pack'], 5, 'Stabilization work benefits from incident-response guidance.')
 
-if has_any('unfreeze', 'resume', 'resume normal execution'):
+if risk_is('resume') or has_any('unfreeze', 'resume', 'resume normal execution'):
     add_skill(['unfreeze-mode'], 7, 'Detected unfreeze intent.')
 
 # fallback
 if max(skill_scores.values()) == 0:
     add_skill(['plan-engineering', 'review-change', 'qa-release'], 3, 'No strong pattern detected, falling back to the smallest useful default workflow.')
 
-# build recommendations
 sorted_skills = sorted(skill_scores.items(), key=lambda x: (-x[1], x[0]))
 sorted_packs = sorted(pack_scores.items(), key=lambda x: (-x[1], x[0]))
-
 recommended_skills = [name for name, score in sorted_skills if score > 0][:6]
 recommended_packs = [name for name, score in sorted_packs if score > 0][:6]
 
-# derive a compact suggested flow
 flow = []
 for candidate in [
     'careful-mode',
@@ -184,50 +244,67 @@ for candidate in [
     if candidate in recommended_skills and candidate not in flow:
         flow.append(candidate)
 
-# simplify flow to avoid awkward combinations
 if 'freeze-mode' in flow and 'implement-feature' in flow:
     flow.remove('implement-feature')
 if 'unfreeze-mode' in flow and 'freeze-mode' in flow:
     flow.remove('unfreeze-mode')
 if 'review-change' in flow and ('review-frontend-flow' in flow or 'review-backend-api' in flow):
-    # prefer specific review modes when already present
-    flow = [x for x in flow if x != 'review-change'] + ['qa-release'] if 'qa-release' in flow else [x for x in flow if x != 'review-change']
-    seen = []
-    dedup = []
-    for x in flow:
-        if x not in seen:
-            dedup.append(x)
-            seen.append(x)
-    flow = dedup
+    flow = [x for x in flow if x != 'review-change']
 
-# ensure qa-release tends to appear near the end if relevant
 if 'qa-release' in flow:
     flow = [x for x in flow if x != 'qa-release'] + ['qa-release']
 if 'document-release' in flow:
     flow = [x for x in flow if x != 'document-release'] + ['document-release']
 
-print('xstack recommend')
-print(f'query: {query}')
-print()
-print('Suggested flow:')
-for idx, item in enumerate(flow, start=1):
-    print(f'  {idx}. {item}')
-print()
-print('Suggested skills:')
-for name in recommended_skills:
-    print(f"  - {name}: {skill_meta[name]['summary']}")
-print()
-print('Suggested packs:')
-if recommended_packs:
-    for name in recommended_packs:
-        print(f"  - {name}: {pack_meta[name]['summary']}")
+result = {
+    'query': query,
+    'task': task or None,
+    'stack': stack or None,
+    'risk': risk or None,
+    'flow': flow,
+    'skills': [
+        {'name': name, 'summary': skill_meta[name]['summary']}
+        for name in recommended_skills
+    ],
+    'packs': [
+        {'name': name, 'summary': pack_meta[name]['summary']}
+        for name in recommended_packs
+    ],
+    'why': reasons[:8],
+    'tip': 'This script is a starting-point recommender. Use it to choose a sane first workflow, then refine with the repo reality.'
+}
+
+if json_output:
+    print(json.dumps(result, indent=2, ensure_ascii=False))
 else:
-    print('  - None strongly suggested from the current query.')
-print()
-print('Why:')
-for reason in reasons[:8]:
-    print(f'  - {reason}')
-print()
-print('Tip:')
-print('  - This script is a starting-point recommender. Use it to choose a sane first workflow, then refine with the repo reality.')
+    print('xstack recommend')
+    print(f"query: {query}")
+    if task:
+        print(f"task: {task}")
+    if stack:
+        print(f"stack: {stack}")
+    if risk:
+        print(f"risk: {risk}")
+    print()
+    print('Suggested flow:')
+    for idx, item in enumerate(flow, start=1):
+        print(f'  {idx}. {item}')
+    print()
+    print('Suggested skills:')
+    for item in result['skills']:
+        print(f"  - {item['name']}: {item['summary']}")
+    print()
+    print('Suggested packs:')
+    if result['packs']:
+        for item in result['packs']:
+            print(f"  - {item['name']}: {item['summary']}")
+    else:
+        print('  - None strongly suggested from the current query.')
+    print()
+    print('Why:')
+    for reason in result['why']:
+        print(f'  - {reason}')
+    print()
+    print('Tip:')
+    print(f"  - {result['tip']}")
 PY
