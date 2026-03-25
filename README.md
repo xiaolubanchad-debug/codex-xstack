@@ -83,6 +83,9 @@ Add:
 For execution-oriented starter flows, go to [examples/README.md](./examples/README.md).  
 如果你想直接看更偏执行导向的起步流程，请看 [examples/README.md](./examples/README.md)。
 
+If you want generated indexes of the current stack, see [SKILLS_INDEX.md](./SKILLS_INDEX.md) and [PACKS_INDEX.md](./PACKS_INDEX.md).  
+如果你想看当前栈的自动生成索引，可以看 [SKILLS_INDEX.md](./SKILLS_INDEX.md) 和 [PACKS_INDEX.md](./PACKS_INDEX.md)。
+
 ---
 
 ## Why xstack exists / 为什么会有 xstack
@@ -371,6 +374,28 @@ This keeps the main skill files compact while still allowing deeper guidance whe
 
 ---
 
+## Metadata and generated indexes / 元数据与自动生成索引
+
+xstack now includes a lightweight metadata layer for skills and packs.  
+xstack 现在包含一层轻量元数据，用于描述 skills 和 packs。
+
+See:
+
+- [METADATA.md](./METADATA.md)
+- [SKILLS_INDEX.md](./SKILLS_INDEX.md)
+- [PACKS_INDEX.md](./PACKS_INDEX.md)
+
+If you change metadata, run:
+
+```bash
+./scripts/build-index.sh
+./scripts/doctor.sh
+```
+
+如果你修改了 metadata，请运行上面的命令来重新生成索引并做一致性校验。
+
+---
+
 ## Quick Start / 快速开始
 
 If you only want the shortest path to trying xstack, do this:  
@@ -611,6 +636,15 @@ For a GitHub-ready bilingual release draft, see [GITHUB_RELEASE_v0.3.0.md](./GIT
 
 See [CONTRIBUTING.md](./CONTRIBUTING.md) for contribution guidelines.  
 贡献方式与约定请见 [CONTRIBUTING.md](./CONTRIBUTING.md)。
+
+If you change metadata or generated indexes, make sure to run:
+
+```bash
+./scripts/build-index.sh
+./scripts/doctor.sh
+```
+
+如果你修改了 metadata 或自动生成索引，请记得运行上面的命令。
 
 ## Release notes / 发布说明
 

@@ -70,6 +70,37 @@ When editing or adding a skill, prefer these rules:
    保持命名风格和现有 skill 集一致。
 5. Update the README if the public surface changes.  
    如果对外可见的能力发生变化，请同步更新 README。
+6. If you change metadata, regenerate indexes and run doctor.  
+   如果你修改了 metadata，请重新生成索引并运行 doctor。
+
+## Metadata and validation / 元数据与校验
+
+xstack now includes a lightweight metadata layer for skills and packs.  
+xstack 现在包含一层轻量 metadata，用于描述 skills 和 packs。
+
+Relevant files:
+
+- `METADATA.md`
+- `skills/*/skill.json`
+- `packs/*.json`
+- `SKILLS_INDEX.md`
+- `PACKS_INDEX.md`
+
+If you change metadata, run:
+
+```bash
+./scripts/build-index.sh
+./scripts/doctor.sh
+```
+
+Expected contributor behavior:
+
+- keep metadata small and consistent with the markdown entry files
+- do not duplicate full markdown content into JSON
+- regenerate indexes after metadata changes
+- keep doctor passing before opening a PR or shipping a change
+
+---
 
 ## Naming conventions / 命名约定
 
