@@ -148,8 +148,9 @@ Add:
 
 1. `README.md`
 2. `QUICKSTART.md`
-3. one file from `examples/` that matches your stack
-4. the skill you want to start with
+3. `CODEX_WORKFLOWS.md`
+4. one file from `examples/` that matches your stack
+5. the skill you want to start with
 
 Do not read every skill up front unless you actually need them.
 

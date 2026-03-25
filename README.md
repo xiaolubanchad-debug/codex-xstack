@@ -15,6 +15,9 @@ It is inspired by the useful part of gstack — role-based workflow switching �
 > Want the shortest path to trying it? Read [QUICKSTART.md](./QUICKSTART.md).  
 > 想走最短上手路径？看 [QUICKSTART.md](./QUICKSTART.md)。
 >
+> Want the Codex-specific session patterns? Read [CODEX_WORKFLOWS.md](./CODEX_WORKFLOWS.md).  
+> 想看更贴近 Codex 会话节奏的工作流？看 [CODEX_WORKFLOWS.md](./CODEX_WORKFLOWS.md)。
+>
 > Want to avoid common usage mistakes? Read [ANTI_PATTERNS.md](./ANTI_PATTERNS.md).  
 > 想避免常见使用误区？看 [ANTI_PATTERNS.md](./ANTI_PATTERNS.md)。
 
