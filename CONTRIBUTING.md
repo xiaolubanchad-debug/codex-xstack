@@ -99,6 +99,14 @@ If you change recommendation behavior, also run:
 ./scripts/test-recommend.sh
 ```
 
+You can also use the unified entrypoint for common tasks:
+
+```bash
+./scripts/xstack.sh doctor
+./scripts/xstack.sh build-index
+./scripts/xstack.sh test-recommend
+```
+
 Recommendation rules live in:
 
 - `config/recommend-rules.json`

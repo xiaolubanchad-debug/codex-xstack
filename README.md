@@ -392,6 +392,13 @@ If you change metadata, run:
 ./scripts/doctor.sh
 ```
 
+Or through the unified entrypoint:
+
+```bash
+./scripts/xstack.sh build-index
+./scripts/xstack.sh doctor
+```
+
 If you want a heuristic starting recommendation based on a task or stack query, try:
 
 ```bash
@@ -409,6 +416,13 @@ If you change recommendation behavior, run:
 
 ```bash
 ./scripts/test-recommend.sh
+```
+
+Or through the unified entrypoint:
+
+```bash
+./scripts/xstack.sh recommend --task feature --stack "nextjs prisma"
+./scripts/xstack.sh test-recommend
 ```
 
 如果你修改了 metadata，请运行上面的命令来重新生成索引并做一致性校验。你也可以用 `recommend.sh` 根据自由文本或结构化参数得到一个启发式起步建议；推荐规则现在集中在 `config/recommend-rules.json`；如果改了推荐逻辑，请再跑 `test-recommend.sh`。
@@ -479,6 +493,12 @@ cd codex-xstack
 
 ```bash
 ./scripts/install.sh <target-dir>
+```
+
+Or via the unified entrypoint:
+
+```bash
+./scripts/xstack.sh install <target-dir>
 ```
 
 Example / 示例：

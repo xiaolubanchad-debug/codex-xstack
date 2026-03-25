@@ -38,6 +38,12 @@ If your workflow already reads this repository directly, you can use it in place
 ./scripts/install.sh ~/my-codex/xstack
 ```
 
+Or use the unified entrypoint:
+
+```bash
+./scripts/xstack.sh install ~/my-codex/xstack
+```
+
 Then point your Codex setup at that directory.
 
 然后把你的 Codex 配置指向该目录。
