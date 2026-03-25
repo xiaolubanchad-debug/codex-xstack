@@ -23,6 +23,68 @@ Instead of one giant prompt and a lot of hope, xstack gives Codex a set of compa
 
 ---
 
+## Why use xstack / 为什么用 xstack
+
+xstack is for people who want Codex to behave more like a disciplined delivery partner and less like a fast but loosely guided editor.  
+xstack 适合那些希望 Codex 更像一个有纪律的软件交付搭档，而不是一个虽然很快、但缺少约束的编辑器的人。
+
+Use xstack when you want:
+
+- clearer planning before code changes / 改代码前先把事情想清楚
+- tighter implementation discipline / 让实现过程更克制、更有纪律
+- more reliable review and QA passes / 让 review 和 QA 更可靠
+- better handling of risky or ambiguous work / 更好地处理高风险或需求不清的任务
+- a stack that feels native to Codex rather than adapted from another tool / 希望得到一套真正贴近 Codex 的工作流栈
+
+If you want maximum improvisation and minimum process, xstack is probably a worse fit.  
+如果你追求极致自由发挥、几乎不想要任何流程，那么 xstack 大概率不适合你。
+
+---
+
+## Choose your path / 选择你的起步路径
+
+### New here / 第一次接触
+
+1. Read [START_HERE.md](./START_HERE.md)
+2. Read [QUICKSTART.md](./QUICKSTART.md)
+3. Try the minimal workflow:
+   - `plan-engineering`
+   - `review-change`
+   - `qa-release`
+
+### Building a new feature / 做新功能
+
+1. `plan-product`
+2. `plan-engineering`
+3. `implement-feature`
+4. `review-change`
+5. `qa-release`
+
+### Fixing a bug / 修 bug
+
+1. `investigate-bug`
+2. `plan-engineering` if needed
+3. `implement-feature`
+4. `review-change`
+5. `qa-release`
+
+### Working on frontend / 做前端
+
+Add:
+- `review-frontend-flow`
+- optional: `design-review`
+
+### Working on backend or APIs / 做后端或 API
+
+Add:
+- `review-backend-api`
+- optional: `security-review`
+
+For execution-oriented starter flows, go to [examples/README.md](./examples/README.md).  
+如果你想直接看更偏执行导向的起步流程，请看 [examples/README.md](./examples/README.md)。
+
+---
+
 ## Why xstack exists / 为什么会有 xstack
 
 Codex is strong at execution.  
@@ -34,19 +96,8 @@ What it often needs is better structure around **when to plan**, **when to slow 
 That is the job of xstack.  
 xstack 的工作，就是补上这层结构。
 
-xstack is for people who want:  
-xstack 适合这样的人：
-
-- clearer planning before code changes  
-  在改代码前先把事情想清楚
-- tighter implementation discipline  
-  让实现过程更克制、更有纪律
-- more reliable review and QA passes  
-  让 review 和 QA 更可靠
-- better handling of risky or ambiguous changes  
-  更好地处理高风险或需求不清的改动
-- a stack that feels native to Codex rather than adapted from another tool  
-  希望得到一套真正贴近 Codex，而不是从别的工具生搬硬套来的工作流栈
+The core problem xstack tries to solve is not capability, but judgment and timing.  
+xstack 试图解决的核心问题，不是“能不能做”，而是“什么时候该先想、什么时候该收敛、什么时候才算真的 ready”。
 
 ---
 
