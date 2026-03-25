@@ -105,6 +105,7 @@ You can also use the unified entrypoint for common tasks:
 ./scripts/xstack.sh doctor
 ./scripts/xstack.sh build-index
 ./scripts/xstack.sh test-recommend
+./scripts/xstack.sh release-check
 ```
 
 Recommendation rules live in:

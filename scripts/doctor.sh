@@ -68,6 +68,7 @@ check_file "config/recommend-rules.json"
 check_file "config/recommend-rules.schema.json"
 check_file "scripts/install.sh"
 check_file "scripts/doctor.sh"
+check_file "scripts/release-check.sh"
 check_file "scripts/xstack.sh"
 
 echo
