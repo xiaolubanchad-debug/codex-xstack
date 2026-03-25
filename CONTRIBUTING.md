@@ -99,6 +99,10 @@ If you change recommendation behavior, also run:
 ./scripts/test-recommend.sh
 ```
 
+Recommendation rules live in:
+
+- `config/recommend-rules.json`
+
 Expected contributor behavior:
 
 - keep metadata small and consistent with the markdown entry files

@@ -63,6 +63,8 @@ check_dir "skills"
 check_dir "packs"
 check_dir "examples"
 check_dir "scripts"
+check_dir "config"
+check_file "config/recommend-rules.json"
 check_file "scripts/install.sh"
 check_file "scripts/doctor.sh"
 

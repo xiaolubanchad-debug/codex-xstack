@@ -1,0 +1,145 @@
+{
+  "tasks": {
+    "feature": {
+      "keywords": ["feature", "build", "new feature", "implement"],
+      "skills": ["plan-product", "plan-engineering", "implement-feature", "qa-release"],
+      "skillPoints": 5,
+      "reason": "Detected feature-building intent."
+    },
+    "bug": {
+      "keywords": ["bug", "fix", "incident", "regression", "broken", "debug"],
+      "skills": ["investigate-bug", "plan-engineering", "implement-feature", "qa-release"],
+      "skillPoints": 6,
+      "reason": "Detected bug-fix or investigation intent."
+    },
+    "review": {
+      "keywords": ["review", "diff", "audit", "check"],
+      "skills": ["review-change"],
+      "skillPoints": 4,
+      "reason": "Detected review-oriented intent."
+    },
+    "release": {
+      "keywords": ["release", "ship", "deploy", "rollout"],
+      "skills": ["qa-release", "document-release"],
+      "skillPoints": 5,
+      "packs": ["release-risk-pack"],
+      "packPoints": 4,
+      "reason": "Detected release-oriented intent."
+    },
+    "frontend": {
+      "keywords": ["frontend", "ui", "ux", "page", "component", "screen"],
+      "skills": ["review-frontend-flow"],
+      "skillPoints": 6,
+      "packs": ["frontend-state-flow-pack", "component-consistency-pack"],
+      "packPoints": 5,
+      "reason": "Detected frontend or UI-oriented work."
+    },
+    "backend": {
+      "keywords": ["backend", "api", "endpoint", "controller", "handler", "service"],
+      "skills": ["review-backend-api"],
+      "skillPoints": 6,
+      "packs": ["backend-api-pack"],
+      "packPoints": 5,
+      "reason": "Detected backend or API-oriented work."
+    },
+    "fullstack": {
+      "keywords": ["fullstack", "full-stack", "client server", "frontend backend", "contract"],
+      "skills": ["review-frontend-flow", "review-backend-api"],
+      "skillPoints": 4,
+      "packs": ["fullstack-contract-pack"],
+      "packPoints": 6,
+      "reason": "Detected full-stack or contract-alignment work."
+    }
+  },
+  "signals": {
+    "form": {
+      "keywords": ["form", "submit", "validation"],
+      "skills": ["review-frontend-flow"],
+      "skillPoints": 2,
+      "packs": ["form-flow-pack"],
+      "packPoints": 6,
+      "reason": "Form-related work benefits from form-flow checks."
+    },
+    "security": {
+      "keywords": ["auth", "permission", "permissions", "role", "roles", "tenant", "billing", "security", "secure", "ownership"],
+      "skills": ["security-review", "review-backend-api"],
+      "skillPoints": 7,
+      "packs": ["auth-permission-pack"],
+      "packPoints": 6,
+      "reason": "Detected auth, permission, or trust-boundary risk."
+    },
+    "data": {
+      "keywords": ["db", "database", "schema", "migration", "migrate", "prisma", "transaction", "query"],
+      "skills": ["plan-engineering", "qa-release"],
+      "skillPoints": 2,
+      "packs": ["db-migration-pack", "prisma-pack"],
+      "packPoints": 6,
+      "reason": "Detected schema, data, or Prisma-related work."
+    },
+    "nextjs": {
+      "keywords": ["next", "nextjs", "next.js", "app router", "server action", "route handler"],
+      "skills": ["plan-engineering", "review-frontend-flow"],
+      "skillPoints": 2,
+      "packs": ["nextjs-app-pack"],
+      "packPoints": 7,
+      "reason": "Detected Next.js-specific context."
+    },
+    "trpc": {
+      "keywords": ["trpc", "t.rpc"],
+      "skills": ["review-backend-api", "review-frontend-flow"],
+      "skillPoints": 3,
+      "packs": ["trpc-pack"],
+      "packPoints": 7,
+      "reason": "Detected tRPC-specific context."
+    },
+    "nestjs": {
+      "keywords": ["nestjs", "nest"],
+      "skills": ["review-backend-api"],
+      "skillPoints": 2,
+      "packs": ["nestjs-backend-pack"],
+      "packPoints": 7,
+      "reason": "Detected NestJS-specific context."
+    },
+    "express": {
+      "keywords": ["express"],
+      "skills": ["review-backend-api"],
+      "skillPoints": 2,
+      "packs": ["express-api-pack"],
+      "packPoints": 7,
+      "reason": "Detected Express-specific context."
+    },
+    "risky": {
+      "keywords": ["risky", "high-impact", "ambiguous", "careful"],
+      "skills": ["careful-mode"],
+      "skillPoints": 8,
+      "packs": ["release-risk-pack"],
+      "packPoints": 5,
+      "reason": "Detected risky or ambiguous work."
+    },
+    "freeze": {
+      "keywords": ["freeze", "containment", "stabilize", "stabilization"],
+      "skills": ["freeze-mode", "investigate-bug"],
+      "skillPoints": 8,
+      "packs": ["incident-response-pack"],
+      "packPoints": 6,
+      "reason": "Detected freeze or stabilization intent."
+    },
+    "resume": {
+      "keywords": ["unfreeze", "resume", "resume normal execution"],
+      "skills": ["unfreeze-mode"],
+      "skillPoints": 8,
+      "reason": "Detected unfreeze intent."
+    }
+  },
+  "riskAliases": {
+    "high": ["security", "risky"],
+    "sensitive": ["security", "risky"],
+    "freeze": ["freeze"],
+    "resume": ["resume"]
+  },
+  "fallback": {
+    "skills": ["plan-engineering", "review-change", "qa-release"],
+    "skillPoints": 3,
+    "reason": "No strong pattern detected, falling back to the smallest useful default workflow."
+  }
+}
