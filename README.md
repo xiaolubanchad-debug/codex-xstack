@@ -403,6 +403,7 @@ If you want a heuristic starting recommendation based on a task or stack query, 
 Recommendation rules now live in:
 
 - `config/recommend-rules.json`
+- `config/recommend-rules.schema.json`
 
 If you change recommendation behavior, run:
 

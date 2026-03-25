@@ -102,6 +102,7 @@ If you change recommendation behavior, also run:
 Recommendation rules live in:
 
 - `config/recommend-rules.json`
+- `config/recommend-rules.schema.json`
 
 Expected contributor behavior:
 

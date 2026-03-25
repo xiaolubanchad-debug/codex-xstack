@@ -65,6 +65,7 @@ check_dir "examples"
 check_dir "scripts"
 check_dir "config"
 check_file "config/recommend-rules.json"
+check_file "config/recommend-rules.schema.json"
 check_file "scripts/install.sh"
 check_file "scripts/doctor.sh"
 
@@ -229,6 +230,124 @@ while IFS= read -r line; do
     FAILED=1
   fi
 done <<< "$METADATA_CHECK_OUTPUT"
+
+echo
+RECOMMEND_RULES_CHECK_OUTPUT="$(python3 - <<'PY'
+import json
+import os
+
+errors = []
+passes = []
+
+with open('config/recommend-rules.json', 'r', encoding='utf-8') as f:
+    rules = json.load(f)
+with open('config/recommend-rules.schema.json', 'r', encoding='utf-8') as f:
+    schema = json.load(f)
+
+skill_names = {os.path.basename(path) for path in os.listdir('skills') if os.path.isdir(os.path.join('skills', path))}
+pack_names = {os.path.splitext(name)[0] for name in os.listdir('packs') if name.endswith('.md')}
+signal_names = set(rules.get('signals', {}).keys())
+
+for key in ['tasks', 'signals', 'riskAliases', 'fallback']:
+    if key not in rules:
+        errors.append(f"Missing top-level key in config/recommend-rules.json: {key}")
+
+if '$defs' not in schema:
+    errors.append('Schema file missing $defs section: config/recommend-rules.schema.json')
+else:
+    passes.append('Loaded recommend-rules schema: config/recommend-rules.schema.json')
+
+
+def validate_string_array(value, label):
+    if not isinstance(value, list):
+        errors.append(f"{label} must be an array")
+        return
+    if any(not isinstance(item, str) or not item.strip() for item in value):
+        errors.append(f"{label} must contain non-empty strings")
+    if len(value) != len(set(value)):
+        errors.append(f"{label} must not contain duplicates")
+
+
+def validate_rule_container(container_name, required_keywords=True):
+    container = rules.get(container_name, {})
+    if not isinstance(container, dict) or not container:
+        errors.append(f"{container_name} must be a non-empty object")
+        return
+    for rule_name, rule in container.items():
+        if not isinstance(rule, dict):
+            errors.append(f"{container_name}.{rule_name} must be an object")
+            continue
+        if required_keywords:
+            if 'keywords' not in rule:
+                errors.append(f"{container_name}.{rule_name} missing keywords")
+            else:
+                validate_string_array(rule['keywords'], f"{container_name}.{rule_name}.keywords")
+        if 'reason' not in rule or not isinstance(rule['reason'], str) or not rule['reason'].strip():
+            errors.append(f"{container_name}.{rule_name} missing non-empty reason")
+        if 'skills' in rule:
+            validate_string_array(rule['skills'], f"{container_name}.{rule_name}.skills")
+            for item in rule['skills']:
+                if item not in skill_names:
+                    errors.append(f"Unknown skill in {container_name}.{rule_name}.skills: {item}")
+        if 'packs' in rule:
+            validate_string_array(rule['packs'], f"{container_name}.{rule_name}.packs")
+            for item in rule['packs']:
+                if item not in pack_names:
+                    errors.append(f"Unknown pack in {container_name}.{rule_name}.packs: {item}")
+        if 'skillPoints' in rule and (not isinstance(rule['skillPoints'], int) or rule['skillPoints'] < 0):
+            errors.append(f"{container_name}.{rule_name}.skillPoints must be a non-negative integer")
+        if 'packPoints' in rule and (not isinstance(rule['packPoints'], int) or rule['packPoints'] < 0):
+            errors.append(f"{container_name}.{rule_name}.packPoints must be a non-negative integer")
+
+validate_rule_container('tasks')
+validate_rule_container('signals')
+
+fallback = rules.get('fallback', {})
+if not isinstance(fallback, dict):
+    errors.append('fallback must be an object')
+else:
+    for key in ['skills', 'skillPoints', 'reason']:
+        if key not in fallback:
+            errors.append(f"fallback missing {key}")
+    if 'skills' in fallback:
+        validate_string_array(fallback['skills'], 'fallback.skills')
+        for item in fallback['skills']:
+            if item not in skill_names:
+                errors.append(f"Unknown skill in fallback.skills: {item}")
+    if 'skillPoints' in fallback and (not isinstance(fallback['skillPoints'], int) or fallback['skillPoints'] < 0):
+        errors.append('fallback.skillPoints must be a non-negative integer')
+    if 'reason' in fallback and (not isinstance(fallback['reason'], str) or not fallback['reason'].strip()):
+        errors.append('fallback.reason must be a non-empty string')
+
+risk_aliases = rules.get('riskAliases', {})
+if not isinstance(risk_aliases, dict):
+    errors.append('riskAliases must be an object')
+else:
+    for alias, targets in risk_aliases.items():
+        validate_string_array(targets, f"riskAliases.{alias}")
+        for item in targets:
+            if item not in signal_names:
+                errors.append(f"Unknown signal referenced by riskAliases.{alias}: {item}")
+
+if not errors:
+    passes.append('Validated recommend rules against schema-like constraints: config/recommend-rules.json')
+
+for line in passes:
+    print('PASS|' + line)
+for line in errors:
+    print('FAIL|' + line)
+PY
+)"
+
+while IFS= read -r line; do
+  [[ -n "$line" ]] || continue
+  if [[ "$line" == PASS\|* ]]; then
+    pass "${line#PASS|}"
+  elif [[ "$line" == FAIL\|* ]]; then
+    fail "${line#FAIL|}"
+    FAILED=1
+  fi
+done <<< "$RECOMMEND_RULES_CHECK_OUTPUT"
 
 echo
 while IFS= read -r doc; do

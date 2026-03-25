@@ -1,0 +1,61 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.com/xstack/recommend-rules.schema.json",
+  "title": "xstack recommend rules",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["tasks", "signals", "riskAliases", "fallback"],
+  "properties": {
+    "tasks": {
+      "type": "object",
+      "minProperties": 1,
+      "additionalProperties": { "$ref": "#/$defs/rule" }
+    },
+    "signals": {
+      "type": "object",
+      "minProperties": 1,
+      "additionalProperties": { "$ref": "#/$defs/rule" }
+    },
+    "riskAliases": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "array",
+        "items": { "type": "string", "minLength": 1 },
+        "uniqueItems": true
+      }
+    },
+    "fallback": {
+      "$ref": "#/$defs/fallbackRule"
+    }
+  },
+  "$defs": {
+    "stringArray": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 },
+      "uniqueItems": true
+    },
+    "rule": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["keywords", "reason"],
+      "properties": {
+        "keywords": { "$ref": "#/$defs/stringArray" },
+        "skills": { "$ref": "#/$defs/stringArray" },
+        "skillPoints": { "type": "integer", "minimum": 0 },
+        "packs": { "$ref": "#/$defs/stringArray" },
+        "packPoints": { "type": "integer", "minimum": 0 },
+        "reason": { "type": "string", "minLength": 1 }
+      }
+    },
+    "fallbackRule": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["skills", "skillPoints", "reason"],
+      "properties": {
+        "skills": { "$ref": "#/$defs/stringArray" },
+        "skillPoints": { "type": "integer", "minimum": 0 },
+        "reason": { "type": "string", "minLength": 1 }
+      }
+    }
+  }
+}
