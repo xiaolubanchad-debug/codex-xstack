@@ -93,6 +93,12 @@ If you change metadata, run:
 ./scripts/doctor.sh
 ```
 
+If you change recommendation behavior, also run:
+
+```bash
+./scripts/test-recommend.sh
+```
+
 Expected contributor behavior:
 
 - keep metadata small and consistent with the markdown entry files

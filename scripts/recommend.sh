@@ -276,12 +276,14 @@ else:
     push_unique(flow, 'plan-engineering')
     if is_feature or is_frontend or is_backend or is_fullstack or is_data:
         push_unique(flow, 'implement-feature')
-    if is_frontend or (is_next and not is_backend and not is_fullstack):
-        push_unique(flow, 'review-frontend-flow')
     if is_fullstack:
+        push_unique(flow, 'review-frontend-flow')
         push_unique(flow, 'review-backend-api')
-    elif is_backend or is_security:
-        push_unique(flow, 'review-backend-api')
+    else:
+        if is_frontend or (is_next and not is_backend and not is_fullstack):
+            push_unique(flow, 'review-frontend-flow')
+        if is_backend or is_security:
+            push_unique(flow, 'review-backend-api')
     if is_security:
         push_unique(flow, 'security-review')
     if not any(x in flow for x in ['review-frontend-flow', 'review-backend-api']) and (is_review or not is_feature):
