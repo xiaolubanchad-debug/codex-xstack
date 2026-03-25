@@ -392,7 +392,14 @@ If you change metadata, run:
 ./scripts/doctor.sh
 ```
 
-如果你修改了 metadata，请运行上面的命令来重新生成索引并做一致性校验。
+If you want a heuristic starting recommendation based on a task or stack query, try:
+
+```bash
+./scripts/recommend.sh "nextjs prisma feature"
+./scripts/recommend.sh "backend api auth permissions"
+```
+
+如果你修改了 metadata，请运行上面的命令来重新生成索引并做一致性校验。你也可以用 `recommend.sh` 根据任务或技术栈关键词得到一个启发式起步建议。
 
 ---
 
