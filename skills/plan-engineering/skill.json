@@ -1,0 +1,29 @@
+{
+  "name": "plan-engineering",
+  "type": "skill",
+  "category": "core",
+  "summary": "Inspect the codebase and produce an implementation plan before editing files.",
+  "entry": "SKILL.md",
+  "triggers": [
+    "implementation planning",
+    "repo inspection",
+    "pre-coding analysis"
+  ],
+  "recommendedWith": [
+    "implement-feature",
+    "review-change",
+    "qa-release"
+  ],
+  "packs": [
+    "backend-api-pack",
+    "db-migration-pack",
+    "fullstack-contract-pack",
+    "frontend-state-flow-pack",
+    "auth-permission-pack",
+    "nextjs-app-pack",
+    "prisma-pack",
+    "nestjs-backend-pack",
+    "trpc-pack",
+    "express-api-pack"
+  ]
+}

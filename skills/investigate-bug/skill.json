@@ -1,0 +1,19 @@
+{
+  "name": "investigate-bug",
+  "type": "skill",
+  "category": "extended",
+  "summary": "Diagnose incidents, regressions, and weird behavior before proposing a fix.",
+  "entry": "SKILL.md",
+  "triggers": [
+    "bug investigation",
+    "incident diagnosis",
+    "root cause analysis"
+  ],
+  "recommendedWith": [
+    "plan-engineering",
+    "implement-feature"
+  ],
+  "packs": [
+    "incident-response-pack"
+  ]
+}

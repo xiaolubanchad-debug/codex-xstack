@@ -1,0 +1,23 @@
+{
+  "name": "security-review",
+  "type": "skill",
+  "category": "review",
+  "summary": "Review auth, trust boundaries, data exposure, and realistic abuse paths.",
+  "entry": "SKILL.md",
+  "triggers": [
+    "auth review",
+    "permission review",
+    "trust boundary review"
+  ],
+  "recommendedWith": [
+    "qa-release"
+  ],
+  "packs": [
+    "backend-api-pack",
+    "fullstack-contract-pack",
+    "auth-permission-pack",
+    "prisma-pack",
+    "nestjs-backend-pack",
+    "express-api-pack"
+  ]
+}

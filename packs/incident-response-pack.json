@@ -1,0 +1,13 @@
+{
+  "name": "incident-response-pack",
+  "type": "pack",
+  "scope": "operations",
+  "summary": "Support production incident triage, containment, and release-risk reasoning.",
+  "entry": "incident-response-pack.md",
+  "bestFitSkills": [
+    "investigate-bug",
+    "careful-mode",
+    "qa-release",
+    "document-release"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "name": "frontend-state-flow-pack",
+  "type": "pack",
+  "scope": "frontend",
+  "summary": "Strengthen frontend state completeness across loading, empty, error, success, retry, and refresh behavior.",
+  "entry": "frontend-state-flow-pack.md",
+  "bestFitSkills": [
+    "plan-engineering",
+    "implement-feature",
+    "design-review",
+    "review-change",
+    "review-frontend-flow",
+    "qa-release"
+  ]
+}

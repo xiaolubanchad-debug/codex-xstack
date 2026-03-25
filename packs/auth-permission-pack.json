@@ -1,0 +1,14 @@
+{
+  "name": "auth-permission-pack",
+  "type": "pack",
+  "scope": "security",
+  "summary": "Strengthen auth, permission, and ownership review across user, role, and tenant boundaries.",
+  "entry": "auth-permission-pack.md",
+  "bestFitSkills": [
+    "plan-engineering",
+    "review-change",
+    "review-backend-api",
+    "security-review",
+    "qa-release"
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "name": "design-review",
+  "type": "skill",
+  "category": "review",
+  "summary": "Evaluate UX quality, interaction clarity, and AI-slop signals in user-facing work.",
+  "entry": "SKILL.md",
+  "triggers": [
+    "UX review",
+    "interaction review",
+    "design quality review"
+  ],
+  "recommendedWith": [
+    "review-frontend-flow",
+    "qa-release"
+  ],
+  "packs": [
+    "frontend-state-flow-pack",
+    "form-flow-pack",
+    "component-consistency-pack"
+  ]
+}

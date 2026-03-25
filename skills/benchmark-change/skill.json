@@ -1,0 +1,16 @@
+{
+  "name": "benchmark-change",
+  "type": "skill",
+  "category": "review",
+  "summary": "Assess whether performance claims are backed by credible measurement.",
+  "entry": "SKILL.md",
+  "triggers": [
+    "performance review",
+    "benchmark review",
+    "measurement validation"
+  ],
+  "recommendedWith": [
+    "qa-release"
+  ],
+  "packs": []
+}

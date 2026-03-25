@@ -1,0 +1,16 @@
+{
+  "name": "freeze-mode",
+  "type": "skill",
+  "category": "control",
+  "summary": "Pause broad edits and focus on stabilization, containment, or diagnosis.",
+  "entry": "SKILL.md",
+  "triggers": [
+    "freeze changes",
+    "incident stabilization",
+    "containment"
+  ],
+  "recommendedWith": [
+    "investigate-bug"
+  ],
+  "packs": []
+}

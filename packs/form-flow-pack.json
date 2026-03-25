@@ -1,0 +1,14 @@
+{
+  "name": "form-flow-pack",
+  "type": "pack",
+  "scope": "frontend",
+  "summary": "Improve submit-heavy user flows by checking validation, submit states, retries, and error handling.",
+  "entry": "form-flow-pack.md",
+  "bestFitSkills": [
+    "implement-feature",
+    "design-review",
+    "review-change",
+    "review-frontend-flow",
+    "qa-release"
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "name": "review-frontend-flow",
+  "type": "skill",
+  "category": "review",
+  "summary": "Review a user-facing flow for state completeness, form behavior, UX quality, and frontend/backend alignment.",
+  "entry": "SKILL.md",
+  "triggers": [
+    "frontend flow review",
+    "state review",
+    "form behavior review"
+  ],
+  "recommendedWith": [
+    "qa-release"
+  ],
+  "packs": [
+    "frontend-state-flow-pack",
+    "form-flow-pack",
+    "fullstack-contract-pack",
+    "release-risk-pack",
+    "component-consistency-pack",
+    "nextjs-app-pack",
+    "trpc-pack"
+  ]
+}

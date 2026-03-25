@@ -1,0 +1,14 @@
+{
+  "name": "nextjs-app-pack",
+  "type": "pack",
+  "scope": "platform",
+  "summary": "Strengthen Next.js app review around client/server boundaries, data flow, caching, routing, and permissions.",
+  "entry": "nextjs-app-pack.md",
+  "bestFitSkills": [
+    "plan-engineering",
+    "implement-feature",
+    "review-frontend-flow",
+    "review-backend-api",
+    "qa-release"
+  ]
+}

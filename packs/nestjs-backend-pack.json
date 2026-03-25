@@ -1,0 +1,14 @@
+{
+  "name": "nestjs-backend-pack",
+  "type": "pack",
+  "scope": "platform",
+  "summary": "Strengthen NestJS backend review around modules, controllers, services, DTOs, guards, and provider boundaries.",
+  "entry": "nestjs-backend-pack.md",
+  "bestFitSkills": [
+    "plan-engineering",
+    "implement-feature",
+    "review-backend-api",
+    "security-review",
+    "qa-release"
+  ]
+}

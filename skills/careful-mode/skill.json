@@ -1,0 +1,21 @@
+{
+  "name": "careful-mode",
+  "type": "skill",
+  "category": "control",
+  "summary": "Tighten discipline for ambiguous, risky, or high-impact work.",
+  "entry": "SKILL.md",
+  "triggers": [
+    "risky change",
+    "ambiguous work",
+    "high-impact task"
+  ],
+  "recommendedWith": [
+    "plan-engineering",
+    "security-review",
+    "qa-release"
+  ],
+  "packs": [
+    "release-risk-pack",
+    "incident-response-pack"
+  ]
+}

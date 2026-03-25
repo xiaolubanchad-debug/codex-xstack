@@ -1,0 +1,24 @@
+{
+  "name": "review-change",
+  "type": "skill",
+  "category": "review",
+  "summary": "Review a code change for correctness, regressions, maintainability, and release risk.",
+  "entry": "SKILL.md",
+  "triggers": [
+    "diff review",
+    "code review",
+    "change assessment"
+  ],
+  "recommendedWith": [
+    "qa-release"
+  ],
+  "packs": [
+    "backend-api-pack",
+    "db-migration-pack",
+    "fullstack-contract-pack",
+    "frontend-state-flow-pack",
+    "form-flow-pack",
+    "auth-permission-pack",
+    "release-risk-pack"
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "name": "qa-release",
+  "type": "skill",
+  "category": "core",
+  "summary": "Decide whether a change is actually ready to ship.",
+  "entry": "SKILL.md",
+  "triggers": [
+    "release readiness",
+    "QA pass",
+    "ship decision"
+  ],
+  "recommendedWith": [
+    "document-release"
+  ],
+  "packs": [
+    "frontend-state-flow-pack",
+    "form-flow-pack",
+    "component-consistency-pack",
+    "backend-api-pack",
+    "db-migration-pack",
+    "fullstack-contract-pack",
+    "auth-permission-pack",
+    "release-risk-pack",
+    "incident-response-pack",
+    "nextjs-app-pack",
+    "prisma-pack",
+    "nestjs-backend-pack",
+    "trpc-pack",
+    "express-api-pack"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "name": "trpc-pack",
+  "type": "pack",
+  "scope": "platform",
+  "summary": "Strengthen tRPC review around routers, procedures, Zod schemas, middleware, and full-stack type contracts.",
+  "entry": "trpc-pack.md",
+  "bestFitSkills": [
+    "plan-engineering",
+    "implement-feature",
+    "review-backend-api",
+    "review-frontend-flow",
+    "qa-release"
+  ]
+}

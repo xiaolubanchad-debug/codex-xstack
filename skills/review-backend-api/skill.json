@@ -1,0 +1,28 @@
+{
+  "name": "review-backend-api",
+  "type": "skill",
+  "category": "review",
+  "summary": "Review an API or backend change for contract quality, compatibility, authorization, data safety, and release risk.",
+  "entry": "SKILL.md",
+  "triggers": [
+    "API review",
+    "backend contract review",
+    "authorization review"
+  ],
+  "recommendedWith": [
+    "security-review",
+    "qa-release"
+  ],
+  "packs": [
+    "backend-api-pack",
+    "auth-permission-pack",
+    "db-migration-pack",
+    "release-risk-pack",
+    "fullstack-contract-pack",
+    "nextjs-app-pack",
+    "prisma-pack",
+    "nestjs-backend-pack",
+    "trpc-pack",
+    "express-api-pack"
+  ]
+}

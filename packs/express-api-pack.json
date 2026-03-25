@@ -1,0 +1,14 @@
+{
+  "name": "express-api-pack",
+  "type": "pack",
+  "scope": "platform",
+  "summary": "Strengthen lightweight Node API review around routes, middleware, validation placement, and response consistency.",
+  "entry": "express-api-pack.md",
+  "bestFitSkills": [
+    "plan-engineering",
+    "implement-feature",
+    "review-backend-api",
+    "security-review",
+    "qa-release"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "name": "db-migration-pack",
+  "type": "pack",
+  "scope": "data",
+  "summary": "Reduce migration and schema risk around rollout order, old data assumptions, and rollback paths.",
+  "entry": "db-migration-pack.md",
+  "bestFitSkills": [
+    "plan-engineering",
+    "review-change",
+    "review-backend-api",
+    "qa-release"
+  ]
+}

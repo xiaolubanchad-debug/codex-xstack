@@ -1,0 +1,14 @@
+{
+  "name": "backend-api-pack",
+  "type": "pack",
+  "scope": "backend",
+  "summary": "Strengthen backend API work by checking contracts, compatibility, errors, and authorization.",
+  "entry": "backend-api-pack.md",
+  "bestFitSkills": [
+    "plan-engineering",
+    "review-change",
+    "review-backend-api",
+    "security-review",
+    "qa-release"
+  ]
+}

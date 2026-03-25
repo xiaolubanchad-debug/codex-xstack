@@ -1,0 +1,17 @@
+{
+  "name": "plan-product",
+  "type": "skill",
+  "category": "core",
+  "summary": "Turn a vague request into goals, scope, non-goals, assumptions, and acceptance criteria.",
+  "entry": "SKILL.md",
+  "triggers": [
+    "feature scoping",
+    "acceptance criteria",
+    "requirements clarification"
+  ],
+  "recommendedWith": [
+    "plan-engineering",
+    "implement-feature"
+  ],
+  "packs": []
+}

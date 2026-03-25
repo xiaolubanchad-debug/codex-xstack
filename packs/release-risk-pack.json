@@ -1,0 +1,15 @@
+{
+  "name": "release-risk-pack",
+  "type": "pack",
+  "scope": "operations",
+  "summary": "Sharpen release readiness by checking rollout risk, hidden dependencies, validation depth, and operational uncertainty.",
+  "entry": "release-risk-pack.md",
+  "bestFitSkills": [
+    "careful-mode",
+    "review-change",
+    "review-backend-api",
+    "review-frontend-flow",
+    "qa-release",
+    "document-release"
+  ]
+}

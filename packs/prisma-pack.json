@@ -1,0 +1,14 @@
+{
+  "name": "prisma-pack",
+  "type": "pack",
+  "scope": "data",
+  "summary": "Improve Prisma review around schema shape, relations, transactions, queries, and release readiness.",
+  "entry": "prisma-pack.md",
+  "bestFitSkills": [
+    "plan-engineering",
+    "implement-feature",
+    "review-backend-api",
+    "security-review",
+    "qa-release"
+  ]
+}

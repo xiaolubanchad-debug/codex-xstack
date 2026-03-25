@@ -1,0 +1,16 @@
+{
+  "name": "fullstack-contract-pack",
+  "type": "pack",
+  "scope": "fullstack",
+  "summary": "Improve frontend/backend alignment for fields, enums, errors, permissions, and state shape.",
+  "entry": "fullstack-contract-pack.md",
+  "bestFitSkills": [
+    "plan-engineering",
+    "review-change",
+    "review-backend-api",
+    "review-frontend-flow",
+    "security-review",
+    "qa-release",
+    "document-release"
+  ]
+}

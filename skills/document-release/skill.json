@@ -1,0 +1,18 @@
+{
+  "name": "document-release",
+  "type": "skill",
+  "category": "extended",
+  "summary": "Turn technical changes into clear release notes, operator updates, and stakeholder summaries.",
+  "entry": "SKILL.md",
+  "triggers": [
+    "release notes",
+    "operator updates",
+    "stakeholder summary"
+  ],
+  "recommendedWith": [],
+  "packs": [
+    "fullstack-contract-pack",
+    "release-risk-pack",
+    "incident-response-pack"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "name": "unfreeze-mode",
+  "type": "skill",
+  "category": "control",
+  "summary": "Return to normal execution after a freeze-style task.",
+  "entry": "SKILL.md",
+  "triggers": [
+    "resume work",
+    "post-freeze recovery",
+    "return to execution"
+  ],
+  "recommendedWith": [
+    "plan-engineering"
+  ],
+  "packs": []
+}

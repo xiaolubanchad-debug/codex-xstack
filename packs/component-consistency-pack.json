@@ -1,0 +1,13 @@
+{
+  "name": "component-consistency-pack",
+  "type": "pack",
+  "scope": "quality",
+  "summary": "Improve repeated UI pattern quality and product-level frontend consistency.",
+  "entry": "component-consistency-pack.md",
+  "bestFitSkills": [
+    "implement-feature",
+    "design-review",
+    "review-frontend-flow",
+    "qa-release"
+  ]
+}

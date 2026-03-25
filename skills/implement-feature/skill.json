@@ -1,0 +1,27 @@
+{
+  "name": "implement-feature",
+  "type": "skill",
+  "category": "core",
+  "summary": "Make tightly scoped changes, follow local patterns, and validate the result.",
+  "entry": "SKILL.md",
+  "triggers": [
+    "feature implementation",
+    "scoped changes",
+    "repository-aligned coding"
+  ],
+  "recommendedWith": [
+    "review-change",
+    "qa-release"
+  ],
+  "packs": [
+    "frontend-state-flow-pack",
+    "form-flow-pack",
+    "component-consistency-pack",
+    "nextjs-app-pack",
+    "prisma-pack",
+    "nestjs-backend-pack",
+    "trpc-pack",
+    "express-api-pack",
+    "db-migration-pack"
+  ]
+}
