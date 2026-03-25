@@ -9,6 +9,15 @@
 It is inspired by the useful part of gstack — role-based workflow switching — but redesigned for **Codex**, not transplanted from Claude Code.  
 它借鉴了 gstack 里真正有价值的部分——基于角色/模式的工作流切换——但它是为 **Codex** 重新设计的，而不是从 Claude Code 直接移植过来的。
 
+> New here? Start with [START_HERE.md](./START_HERE.md).  
+> 第一次接触 xstack？先看 [START_HERE.md](./START_HERE.md)。
+>
+> Want the shortest path to trying it? Read [QUICKSTART.md](./QUICKSTART.md).  
+> 想走最短上手路径？看 [QUICKSTART.md](./QUICKSTART.md)。
+>
+> Want to avoid common usage mistakes? Read [ANTI_PATTERNS.md](./ANTI_PATTERNS.md).  
+> 想避免常见使用误区？看 [ANTI_PATTERNS.md](./ANTI_PATTERNS.md)。
+
 Instead of one giant prompt and a lot of hope, xstack gives Codex a set of compact operating modes for planning, implementation, review, QA, investigation, security, design, and release communication.  
 它不依赖“一个超长 prompt 再加上一点运气”，而是为 Codex 提供一套紧凑的工作模式，用于规划、实现、审查、QA、排障、安全、设计和发布说明。
 
@@ -60,6 +69,18 @@ It avoids theatrical roleplay and focuses on **mode switching** instead.
 
 Instead of dozens of overlapping personas, xstack uses a compact set of skills with clear boundaries.  
 它不追求几十个边界模糊的人设，而是使用一组边界清晰、职责明确的技能。
+
+### Three layers, three jobs / 三层结构，三种职责
+
+xstack works best when these three layers stay clear:  
+xstack 在这三层职责清晰时效果最好：
+
+- **Skills** = workflow modes / 工作模式
+- **Packs** = stack-specific or domain-specific lenses / 技术栈或领域专项视角
+- **References** = deeper checklists and templates loaded only when useful / 按需加载的更细清单与模板
+
+In short: skills decide **how Codex should work**, packs sharpen **what it should pay attention to**, and references provide **deeper guidance when the task actually needs it**.  
+简单说：skills 决定 **Codex 现在该怎么工作**，packs 强化 **它此刻该重点看什么**，references 则在任务确实需要时提供 **更深入的细节指导**。
 
 Each skill is designed to answer one question well:  
 每个 skill 都是为了解决一个明确的问题：
@@ -316,6 +337,9 @@ If you only want the shortest path to trying xstack, do this:
 5. if you are doing backend/API work, add `review-backend-api`  
    如果你做的是后端/API 任务，再加上 `review-backend-api`
 
+For the more guided first-use path, see [QUICKSTART.md](./QUICKSTART.md).  
+如果你想看更清晰、更像上手流程的版本，请看 [QUICKSTART.md](./QUICKSTART.md)。
+
 ### First 10 minutes / 前 10 分钟上手
 
 Try this exact prompt with Codex:  
@@ -511,8 +535,11 @@ The current milestone is **v0.3**, focused on making xstack a clearer Node-first
 See [ROADMAP.md](./ROADMAP.md) for the fuller v0.2/v0.3 direction.  
 更完整的 v0.2 / v0.3 路线，请查看 [ROADMAP.md](./ROADMAP.md)。
 
-For the next milestone framing, see [MILESTONE_v0.3.0.md](./MILESTONE_v0.3.0.md).  
-关于下一个里程碑的整理文案，请查看 [MILESTONE_v0.3.0.md](./MILESTONE_v0.3.0.md)。
+For the v0.3.0 milestone framing, see [MILESTONE_v0.3.0.md](./MILESTONE_v0.3.0.md).  
+关于 v0.3.0 里程碑的整理文案，请查看 [MILESTONE_v0.3.0.md](./MILESTONE_v0.3.0.md)。
+
+For the follow-up adoption and onboarding milestone, see [MILESTONE_v0.3.x.md](./MILESTONE_v0.3.x.md).  
+如果你想看面向上手体验与采用效率的后续里程碑，请查看 [MILESTONE_v0.3.x.md](./MILESTONE_v0.3.x.md)。
 
 For a release-oriented execution checklist, see [RELEASE_PLAN_v0.3.0.md](./RELEASE_PLAN_v0.3.0.md).  
 如果你想看更接近发布执行层的清单，请查看 [RELEASE_PLAN_v0.3.0.md](./RELEASE_PLAN_v0.3.0.md)。
