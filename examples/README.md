@@ -8,6 +8,29 @@ Its purpose is not just to list files, but to help a Node team quickly find the 
 
 ---
 
+## How to choose the right example / 怎么选对 example
+
+### Choose by task type / 按任务类型选择
+
+- **New frontend feature / 新前端功能** → `frontend-feature.md`
+- **Backend or API contract change / 后端或 API 契约改动** → `backend-api-change.md`
+- **Generic full-stack feature / 通用全栈功能** → `fullstack-flow.md`
+
+### Choose by stack / 按技术栈选择
+
+- **Next.js + Prisma** → `nextjs-prisma-feature-flow.md`
+- **Next.js + tRPC + Prisma** → `nextjs-trpc-prisma-fullstack-flow.md`
+- **NestJS + Prisma** → `nest-prisma-backend-flow.md`
+- **Express + Prisma** → `express-prisma-api-flow.md`
+
+### Choose by risk level / 按风险等级选择
+
+- **Mostly UI or product flow risk / 主要是 UI 或产品流程风险** → start with `frontend-feature.md`
+- **Mostly API, data, or permission risk / 主要是 API、数据或权限风险** → start with `backend-api-change.md`
+- **Cross-layer integration risk / 主要是跨层集成风险** → start with `fullstack-flow.md`
+
+---
+
 ## Current generic examples / 当前通用示例
 
 These examples already exist and are still useful as baseline flows:  
@@ -137,16 +160,19 @@ You are working on a lighter-weight Node API with Express and Prisma.
 
 ## What each example file should contain / 每个示例文件应该包含什么
 
-Each future example should use a consistent structure:  
-后续每个示例文件都应该使用统一结构：
+Each example should increasingly use a consistent execution-oriented structure:  
+每个示例文件都应该逐步采用更偏执行导向的统一结构：
 
 1. Scenario / 场景
-2. Stack / 技术栈
-3. Recommended skill flow / 推荐 skill 流程
-4. Relevant packs / 相关 packs
-5. Example prompts / 示例提示词
-6. What xstack should catch / xstack 应该帮你抓到什么
+2. Recommended skill flow / 推荐 skill 流程
+3. Copy-paste prompt / 可直接复制的 prompt
+4. Expected output shape / 期望输出结构
+5. Common failure modes / 常见跑偏模式
+6. Human correction prompts / 人类纠偏 prompt
 7. What a good final result looks like / 理想结果长什么样
+
+The goal is not only to explain the workflow, but to make it easier to run in practice.  
+目标不只是解释工作流，而是让这些示例更容易在真实任务中直接跑起来。
 
 ---
 
@@ -156,9 +182,11 @@ If you are new to xstack:
 如果你是第一次接触 xstack：
 
 1. `README.md`
-2. `examples/frontend-feature.md`
-3. `examples/backend-api-change.md`
-4. this file / 当前这个文件
+2. `START_HERE.md`
+3. `QUICKSTART.md`
+4. `frontend-feature.md`
+5. `backend-api-change.md`
+6. this file / 当前这个文件
 
 If you already understand xstack and want stack-specific guidance:  
 如果你已经理解 xstack，只是想看技术栈专项 guidance：
