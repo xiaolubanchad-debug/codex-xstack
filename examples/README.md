@@ -28,6 +28,7 @@ Its purpose is not just to list files, but to help a Node team quickly find the 
 - **Mostly UI or product flow risk / 主要是 UI 或产品流程风险** → start with `frontend-feature.md`
 - **Mostly API, data, or permission risk / 主要是 API、数据或权限风险** → start with `backend-api-change.md`
 - **Cross-layer integration risk / 主要是跨层集成风险** → start with `fullstack-flow.md`
+- **Not sure which workflow to start with / 还不确定该选哪条 workflow** → start with `recommend-usage.md`
 
 ---
 
@@ -43,6 +44,7 @@ These examples already exist and are still useful as baseline flows:
 - `nextjs-trpc-prisma-fullstack-flow.md`
 - `nest-prisma-backend-flow.md`
 - `express-prisma-api-flow.md`
+- `recommend-usage.md`
 
 Use them when you want to understand the general xstack workflow before switching to stack-specific examples.  
 如果你想先理解 xstack 的通用工作流，再进入具体技术栈示例，可以先看这些文件。

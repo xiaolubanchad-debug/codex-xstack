@@ -567,6 +567,7 @@ See the `examples/` directory for concrete starter flows:
 - `examples/frontend-feature.md`
 - `examples/backend-api-change.md`
 - `examples/fullstack-flow.md`
+- `examples/recommend-usage.md`
 - `examples/README.md` for the planned Node-first examples  
   以及 `examples/README.md`，查看后续 Node-first 示例计划
 
